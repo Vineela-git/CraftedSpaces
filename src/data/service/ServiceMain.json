@@ -1,0 +1,54 @@
+[
+    {
+        "image": "/images/icon/icon-1.png",
+        "title": "Project Planning and Design",
+        "description": "We provide assistance with project planning and design, including architectural design, structural engineering, and site planning.",
+        "process": {
+            "sectionSub": "Process"
+    
+        }
+    },
+    {
+        "image": "/images/icon/icon-2.png",
+        "title": "Construction Management",
+        "description": "We offer construction management services to oversee and coordinate all aspects of the construction process. ",
+        "process": {
+            "sectionSub": "Process"
+        }
+    },
+    {
+        "image": "/images/icon/icon-3.png",
+        "title": "Material Sourcing and Procurement",
+        "description": "Help you with source construction materials, equipment and everything you need from reliable suppliers at competitive prices",
+        "process": {
+            "sectionSub": "Process"
+        }
+    },
+    {
+        "image": "/images/icon/icon-4.png",
+        "title": "Interior Design Consultation",
+        "description": "We offer personalized interior design consultation services and showcase varied portfolios to help clients conceptualize and plan their interior spaces.",
+        "process": {
+            "sectionSub": "Process"
+        }
+    },
+    {
+        "image": "/images/icon/icon-5.png",
+        "title": "Styling and Decor",
+        "description": "We offer styling and decor services to add finishing touches to interior spaces. Assist with accessorizing, art selection, and decor to enhance the overall aesthetic appeal of space.",
+        "process": {
+            "sectionSub": "Process"
+        }
+    },
+    {
+        "image": "/images/icon/icon-6.png",
+        "title": "Post-Construction Services",
+        "description": "We provide post-construction services such as inspections, maintenance to ensure the long-term success and sustainability of projects. ",
+        "process": {
+            "sectionSub": "Process"
+        }
+    }
+
+    
+    
+]
