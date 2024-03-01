@@ -12,7 +12,6 @@ import Architects from './pages/Architects';
 import InteriorDesigner from './pages/InteriorDesigners';
 import AboutHomePage from './component/about/AboutHomePage';
 
-// Css Import
 import './assets/scss/app.scss';
 
 const App = () => {
