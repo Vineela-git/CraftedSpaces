@@ -19,10 +19,9 @@ const AboutUs = () => {
             <main className="main-wrapper">
                 <Header />
                 <BcrumbBannerOne 
-                title="One of the fastest growing agency"
-                paragraph ="We design and develop web and mobile applications for our clients worldwide."
-                styleClass="thumbnail-4"
-                mainThumb="/images/banner/banner-thumb-3.png"
+                title="We are one of the leading innovators in the industry"
+                paragraph ="we specialize in designing and developing cutting-edge solutions for building projects of all scales."
+                
                 />
                 <AboutFour />
                 <AboutThree />

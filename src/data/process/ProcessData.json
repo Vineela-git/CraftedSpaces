@@ -4,28 +4,28 @@
         "id": 1,
         "thumb": "/images/others/process-1.png",
         "subtitle": "Step One",
-        "title": "Discover",
-        "paragraph": "Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris."
+        "title": "Sign Up and Onboarding",
+        "paragraph": "Quickly create an account and seamlessly onboard onto our platform to access powerful construction management tools."
     },
     {
         "id": 2,
         "thumb": "/images/others/process-2.png",
         "subtitle": "Step Two",
-        "title": "Prototype",
-        "paragraph": "Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris."
+        "title": "Reach Out to Our Team:",
+        "paragraph": "Connect with our dedicated team for support and guidance in optimizing your project management experience."
     },
     {
         "id": 3,
         "thumb": "/images/others/process-3.png",
         "subtitle": "Step Three",
-        "title": "Test",
-        "paragraph": "Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris."
+        "title": "Explore Features and Services",
+        "paragraph": "Dive into our functionalities and offerings available within the construction application."
     },
     {
         "id": 4,
         "thumb": "/images/others/process-4.png",
         "subtitle": "Step four",
-        "title": "Build",
-        "paragraph": "Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris."
+        "title": "Start Managing Your Projects",
+        "paragraph": "Take charge of your construction projects with ease using our intuitive tools for planning, scheduling, document management, and collaboration."
     }
 ]

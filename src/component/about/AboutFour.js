@@ -18,9 +18,9 @@ const AboutFour = () => {
                         <div className="case-study-featured">
                         <div className="section-heading heading-left">
                             <span className="subtitle">Who we are</span>
-                            <h2 className="title">Building software for world changers</h2>
-                            <p>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis.</p>
-                            <p>Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
+                            <h2 className="title">Our Identity and Commitment to Construction Solutions</h2>
+                            <p>With decades of combined experience in the construction industry, our team brings a wealth of expertise to every project.</p>
+                            <p>Whether it's residential, commercial, or industrial construction, we have the knowledge, skills, and resources to tackle projects of any size and complexity</p>
                             <Link to="#" className="axil-btn btn-fill-primary btn-large">Read More</Link>
                         </div>
                         <div className="case-study-counterup">
