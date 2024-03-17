@@ -12,8 +12,8 @@ const Nav = () => {
                 </li>
 
                 <li className="menu-item-has-children">
-                    <Link to={process.env.PUBLIC_URL+"/about-us"}>About Us</Link>
-                </li>
+				<Link to={process.env.PUBLIC_URL+"/about-us"}>About Us</Link>  </li>
+                
 
                 <li className="menu-item-has-children">
                     <Link to="#">Services <FaAngleDown /></Link>
@@ -40,7 +40,7 @@ const Nav = () => {
                     <Link to={process.env.PUBLIC_URL+"/search"}>Search</Link>
                   
                 </li>
-                <li><Link to={process.env.PUBLIC_URL + "/contact"}>Contact</Link></li>
+                <li><Link to={process.env.PUBLIC_URL + "/contact-us"}>Contact</Link></li>
             </ul>
         </nav>
     )
