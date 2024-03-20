@@ -18,12 +18,12 @@ const AboutHomePage = () => {
                         </div>
                     </div>
 
-                    <div id="login" className="col-xl-5 col-lg-6 offset-xl-1">
+                    {/* <div id="login" className="col-xl-5 col-lg-6 offset-xl-1">
                         <div className="contact-form-box">
                             <h3 className="title">Login Here</h3>
                            <FormOne />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <ul className="shape-group-6 list-unstyled">

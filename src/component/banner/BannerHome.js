@@ -13,7 +13,7 @@ const BannerOne = () => {
                             <AnimationOnScroll animateIn="fadeInUp" animateOnce={true}>
                                 <h1 className="title">Craft Your Next Space With Ease</h1>
                                 <span className="subtitle">Constructing Connections. Building Dreams.</span>
-                                <Link to={process.env.PUBLIC_URL + "/contact"} className="axil-btn btn-fill-primary btn-large">Get Started</Link>
+                                <Link to={process.env.PUBLIC_URL + "/login"} className="axil-btn btn-fill-primary btn-large">Login Here</Link>
                             </AnimationOnScroll>
                         </div>
                     </div>

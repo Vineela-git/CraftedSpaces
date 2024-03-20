@@ -62,13 +62,15 @@ const FormOne = () => {
             <label>Password</label>
             <input type="password" className="form-control" name="password" placeholder="........" required />
         </div>
+        
+        <div className="form-group mb--40"><label><a href="#">Forgot Password?</a></label>
+        </div>
+
         <div className="form-group">
             <button type="login" className="axil-btn btn-fill-primary btn-fluid btn-primary" name="login-btn">Login</button>
         </div>
     
-        <div className="form-group">
-            <button type="signup" className="axil-btn btn-fill-primary btn-fluid btn-primary" name="signup-btn" onClick={handleSignup}>Signup</button>
-        </div>
+        <div className="form-group"> Don't have an account? <a href="/signup">Sign up here</a> </div>
         
         <div className="form-group">
             {result ? <Result /> : null}
