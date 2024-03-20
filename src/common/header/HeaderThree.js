@@ -23,9 +23,9 @@ const HeaderThree = () => {
                     <div className="container">
                         <div className="header-navbar">
                             <div className="header-logo">
-                                <Logo limage="/images/logo.svg"
+                                <Logo limage="/images/logo1.png"
                                 dimage="/images/logo-3.svg"
-                                simage="/images/logo-2.svg"
+                                simage="/images/logo1.png"
                                 />
                             </div>
                             <div className="header-action">

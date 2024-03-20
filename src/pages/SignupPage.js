@@ -33,7 +33,7 @@ return(
                     <div className="col-xl-5 col-lg-6 offset-xl-4">
 
                     <div className="contact-form-box">
-                            <h3 className="title">Write Content for Two different signups for user and Professional</h3>
+                            <h3 className="title">Your Journey Starts Here, Sign Up Today</h3>
                            <SignupForm />
                         </div>  
                      

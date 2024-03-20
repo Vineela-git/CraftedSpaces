@@ -12,14 +12,14 @@ const BannerThree = () => {
                 <div className="col-lg-6">
                     <div className="banner-content">
                         <AnimationOnScroll  animateIn="slideInUp" duration={1} animateOnce={true} delay={100}>
-                            <span className="subtitle">JOHNATHAN SMITH</span>
+                            <span className="subtitle">Square Designs</span>
                         </AnimationOnScroll>
                         <AnimationOnScroll  animateIn="slideInUp" duration={1} animateOnce={true} delay={200}>
-                            <h1 className="title">UI/UX ineraction designer</h1>
+                            <h1 className="title">Interior designing</h1>
                         </AnimationOnScroll>
                         <AnimationOnScroll  animateIn="slideInUp" duration={1} animateOnce={true} delay={200}>
                         <div className="btn-group">
-                            <a href="https://dribbble.com/axilweb/" className="axil-btn btn-fill-primary btn-large">Latest Work On Dribbble</a>
+                            <a href="https://dribbble.com/axilweb/" className="axil-btn btn-fill-primary btn-large">view more</a>
                             <Link to={process.env.PUBLIC_URL + "/about-us"} className="about-btn">About Me</Link>
                         </div>
                         </AnimationOnScroll>
