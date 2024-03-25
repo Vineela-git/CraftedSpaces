@@ -2,10 +2,10 @@ import React from 'react';
 import HeaderThree from '../common/header/HeaderThree';
 import SEO from '../common/SEO';
 import BannerPortfolio from '../component/banner/BannerPortfolio';
-import ProjectTwo from '../component/project/ProjectTwo';
+import ProjectThree from '../component/project/ProjectThree';
 import SectionTitle from '../elements/section-title/SectionTitle';
 import ColorSwitcher from '../elements/switcher/ColorSwitcher';
-import ProjectThree from '../component/project/ProjectThree';
+import ProjectTwo from '../component/project/ProjectTwo';
 import FooterTwo from '../common/footer/FooterTwo';
 import FormThree from '../component/contact/FormThree';
 
@@ -18,8 +18,8 @@ const PersonalPortfolio = () => {
         <main className="main-wrapper">
             <HeaderThree />
             <BannerPortfolio/>
-            <ProjectTwo />
-            <ProjectThree />
+            <ProjectThree/>
+            <ProjectTwo/>
 
         
             <div className="section-padding bg-color-dark">
@@ -37,15 +37,15 @@ const PersonalPortfolio = () => {
                             <div className="address-list">
                                 <div className="address">
                                 <h6 className="title">Mail</h6>
-                                <p>example@gmail.com</p>
+                                <p>squarestudios@gmail.com</p>
                                 </div>
                                 <div className="address">
                                 <h6 className="title">Address</h6>
-                                <p>Warnwe Park Streetperrine, FL 33157 New York City</p>
+                                <p>Road No: 34,Jubliee Hills, Hyderabad, India</p>
                                 </div>
                                 <div className="address">
                                 <h6 className="title">Phone</h6>
-                                <p>+0123456789</p>
+                                <p>+919996667890</p>
                                 </div>
                             </div>
                             </div>

@@ -23,9 +23,9 @@ const HeaderThree = () => {
                     <div className="container">
                         <div className="header-navbar">
                             <div className="header-logo">
-                                <Logo limage="/images/logo1.png"
-                                dimage="/images/logo-3.svg"
-                                simage="/images/logo1.png"
+                                <Logo limage="/images/logo-transparent.png"
+                                dimage="/images/logo-transparent-darktheme.png"
+                                simage="/images/logo-transparent.png"
                                 />
                             </div>
                             <div className="header-action">
@@ -35,7 +35,6 @@ const HeaderThree = () => {
                                             <li><a href="https://facebook.com/"><FaFacebookF /></a></li>
                                             <li><a href="https://twitter.com/"><FaXTwitter /></a></li>
                                             <li><a href="https://www.linkedin.com/"><FaLinkedin /></a></li>
-                                            <li><a href="https://www.behance.net/"><FaBehance /></a></li>
                                         </ul>
                                     </li>
 

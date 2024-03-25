@@ -1,14 +1,7 @@
 import React, { useRef, useState} from 'react';
-import Alert from 'react-bootstrap/Alert';
 import { useNavigate } from 'react-router-dom';
 
-const Result = () => {
-    return (
-        <Alert variant="success" className="success-msg">
-            You Logged in Successfully.
-        </Alert>
-    )
-}
+
 const FormOne = () => {
 
     const [loggedIn, setLoggedIn] = useState(false);
@@ -19,9 +12,9 @@ const FormOne = () => {
 
     const [ result, showresult ] = useState(false);
 
-    const sendEmail = (e) => {
-        e.preventDefault();
-      };
+   
+//prevents the default form submission behavior, which is a page reload
+//Once you've prevented the default behavior, you can execute custom logic
 
       const handleLogin = (e) => {
         e.preventDefault();
@@ -30,6 +23,7 @@ const FormOne = () => {
         // For now, we're just simulating login
     
         setLoggedIn(true);
+
         setUser({
           name:'John',
           email: 'john@email.com',
@@ -52,6 +46,8 @@ const FormOne = () => {
           if(!loggedIn) {
           
     return (
+
+      
         <form ref={form} onSubmit={handleLogin}  className="axil-contact-form">
         
         <div id="login" className="form-group">
@@ -72,21 +68,13 @@ const FormOne = () => {
     
         <div className="form-group"> Don't have an account? <a href="/signup">Sign up here</a> </div>
         
-        <div className="form-group">
-            {result ? <Result /> : null}
-        </div>
-
+      
     </form>
     ) 
+
     
           }
-
-          return ( 
-            <div>
-              <p>Welcome {user.name}!</p>
-
-            </div>
-          )
+          
 }
 
 export default FormOne;

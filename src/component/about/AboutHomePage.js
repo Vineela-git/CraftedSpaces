@@ -1,5 +1,5 @@
 import React from 'react';
-import FormOne from '../contact/FormOne';
+
 
 
 const AboutHomePage = () => {
@@ -7,12 +7,12 @@ const AboutHomePage = () => {
         <section className="section section-padding-equal bg-color-light">
             <div className="container">
                 <div className="row align-items-center">
-                    <div className="col-lg-6">
+                    <div>
                         <div className="about-us">
                             <div className="section-heading heading-left mb-0">
                                 <span className="subtitle">About Us</span>
                                 <h2 className="title mb--40">We design, construct &amp; innovate.</h2>
-                                <p>Welcome to our construction website, where we turn your vision into reality. With a comprehensive range of services tailored to meet your every need, we are your trusted partner from project inception to completion and beyond. </p>
+                                <p>Welcome to our website, where we turn your vision into reality. With a comprehensive range of services tailored to meet your every need, we are your trusted partner from project inception to completion and beyond. </p>
                                 <p>We specialize in providing top-tier services across the construction spectrum, ensuring that every aspect of your project is meticulously planned, executed, and perfected.  </p>
                             </div>
                         </div>
