@@ -30,7 +30,7 @@ const BannerThree = () => {
                     <div className="large-thumb">
                         <AnimationOnScroll  animateIn="slideInUp" duration={1} animateOnce={true} delay={200}>
                             <Tilty perspective={2000} reset={false}>
-                                <img src={process.env.PUBLIC_URL + "/images/banner/banner-thumb-6.png"} alt="Shape" />
+                                <img src={process.env.PUBLIC_URL + "/images/banner/bannerindian.png"} alt="Shape" />
                             </Tilty>
                         </AnimationOnScroll>
                     </div>
@@ -42,9 +42,9 @@ const BannerThree = () => {
                 <li className="shape shape-1">
                 <img src={process.env.PUBLIC_URL + "/images/others/bubble-32.png"} alt="Bubble" />
                 </li>
-                <li className="shape shape-2">
+                {/* <li className="shape shape-2">
                 <img src={process.env.PUBLIC_URL + "/images/others/bubble-33.png"} alt="Bubble" />
-                </li>
+                </li> */}
                 <li className="shape shape-4">
                 <img src={process.env.PUBLIC_URL + "/images/others/bubble-14.png"} alt="Bubble" />
                 </li>

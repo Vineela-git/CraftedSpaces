@@ -1,23 +1,53 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const PORT = 5001;
-const locationRoutes = require('./routes/location-routes');
-// Creating App Object by executing express as a function.
+const cors = require("cors");
+const axios = require("axios");
 
 const app = express();
+app.use(express.json());
+app.use(cors({ origin: true }));
+app.set('view engine', 'ejs');
 
-// this is added here as a  middleware
-// The path indicates that express js will only forward the requests of this path to location routes middle.
-//api/location/anything will also forward
 
-app.use('/api/location',locationRoutes);
+const CHAT_ENGINE_PROJECT_ID = "";
+const CHAT_ENGINE_PRIVATE_KEY = "";
 
-app.use((error,req,res,next) =>{
+app.post("/signup", async (req, res) => {
+  const { username, secret, email, first_name, last_name } = req.body;
 
-    if('/message3'){
-        return res.status(404).json({message:"Not a valid message"});
-      }
+  // Store a user-copy on Chat Engine!
+  // Docs at rest.chatengine.io
+  try {
+    const r = await axios.post(
+      "https://api.chatengine.io/users/",
+      { username, secret, email, first_name, last_name },
+      { headers: { "Private-Key": CHAT_ENGINE_PRIVATE_KEY } }
+    );
+    return res.status(r.status).json(r.data);
+  } catch (e) {
+    return res.status(e.response.status).json(e.response.data);
+  }
 });
 
+app.post("/login", async (req, res) => {
+  const { username, secret } = req.body;
 
-app.listen(PORT);
+  // Fetch this user from Chat Engine in this project!
+  // Docs at rest.chatengine.io
+  try {
+    const r = await axios.get("https://api.chatengine.io/users/me/", {
+      headers: {
+        "Project-ID": CHAT_ENGINE_PROJECT_ID,
+        "User-Name": username,
+        "User-Secret": secret,
+      },
+    });
+    return res.status(r.status).json(r.data);
+  } catch (e) {
+    return res.status(e.response.status).json(e.response.data);
+  }
+});
+app.get('/', function (req, res) {
+  res.render('index', {});
+});
+// vvv On port 3001!
+app.listen(3001);

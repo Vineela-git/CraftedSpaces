@@ -14,11 +14,16 @@ function SignupForms() {
   }
 
   return (
-    <div>
-      <button className="axil-btn btn-fill-primary btn-fluid btn-primary" onClick={handleUserClick}>User</button>
+    <div> 
+       <div> 
+           <p>Click here to register if you're a client looking for Professional </p>
+           <button className="axil-btn btn-fill-primary btn-fluid btn-primary"  onClick={handleUserClick}>User</button>
+       </div>
+       <div >
+           <button className="axil-btn btn-fill-primary btn-fluid btn-primary" style={{marginBlock: 10}} onClick={handleProfessionalClick}>Professional</button>
+           <p> Click here if You're a Professional to setup your Portfolio</p>
 
-      <button className="axil-btn btn-fill-primary btn-fluid btn-primary" style={{marginBlock: 10}} onClick={handleProfessionalClick}>Professional</button>
-      
+       </div>
       {formType === 'user' && (
         <UserSignupForm />  
       )}
@@ -54,6 +59,8 @@ function UserSignupForm() {
       }
     
       return (
+        <div> 
+         
         <form onSubmit={handleSubmit} class ="form-control">
           <input type="text" name="fullname" value={values.fullname} placeholder="Name" onChange={handleChange} required />
           <input type="email" name="email" value={values.email} placeholder="E-mail" onChange={handleChange} required />
@@ -62,6 +69,7 @@ function UserSignupForm() {
           <input type="text" name="address" value={values.address} placeholder="Address" onChange={handleChange}/>
           <button type="submit" className="axil-btn btn-fill-primary btn-fluid btn-primary"style={{marginBlock: 10}}>Sign Up</button>
         </form>
+        </div>
       );
     }
     
@@ -92,6 +100,7 @@ function ProfessionalSignupForm() {
         };
       
         return (
+          <div>
           <form onSubmit={handleSubmit} class="form-control">
           
             <input type="text" name="fullname" value={values.fullname} placeholder="Name" onChange={handleChange} required />
@@ -102,6 +111,7 @@ function ProfessionalSignupForm() {
             <input type="text"  name="LicenseNumber" value={values.LicenseNumber} placeholder="License Number" onChange={handleChange} required />
             <button type="submit"className="axil-btn btn-fill-primary btn-fluid btn-primary"style={{marginBlock: 10}}>Sign Up</button>
           </form>
+          </div>
         );
       
       }
