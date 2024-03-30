@@ -2,8 +2,8 @@ import React from 'react';
 import UserLoginHeader from '../common/header/UserLoginHeader';
 import Footer from '../common/footer/Footer';
 import SEO from '../common/SEO';
-import AboutHomePage from '../component/about/AboutHomePage.js';
-import BannerHome from '../component/banner/BannerHome';
+import WhyChooseOne from '../component/whychoose/WhyChooseOne';
+import BannerUserHome from '../component/banner/BannerUserHome';
 import CtaLayoutHome from '../component/cta/CtaLayoutHome';
 import ProjectHome from '../component/project/ProjectHome';
 import ServiceLogin from '../component/service/ServiceLogin';
@@ -20,7 +20,8 @@ const UserLoginHome = () => {
          <ColorSwitcher/>
         <main className="main-wrapper">
             <UserLoginHeader />
-            <BannerHome/>
+            <BannerUserHome/>
+            <WhyChooseOne />
             <div className="section section-padding-2 bg-color-dark">
                 <div className="container">
                     <SectionTitle 
@@ -40,7 +41,7 @@ const UserLoginHome = () => {
                     <li className="shape shape-3"><img src={process.env.PUBLIC_URL + "/images/others/bubble-43.png"} alt="Circle" /></li>
                 </ul>
             </div>
-            <AboutHomePage />
+            
             <ProjectHome />
            
             <CtaLayoutHome /> 

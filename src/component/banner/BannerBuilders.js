@@ -13,9 +13,7 @@ const BannerFour = () => {
                 <div className="banner-content">    
                     <h1 className="title">Crafting Dreams into Concrete Reality</h1>
                     <p>Your Trusted Partners in Construction.</p>
-                    <div>
-                        <Link to={process.env.PUBLIC_URL + "/project-grid-one"} className="axil-btn btn-fill-primary btn-large">View Showcase</Link>
-                    </div>
+                    
                 </div>
                 
                 <div className="banner-thumbnail">
@@ -24,14 +22,7 @@ const BannerFour = () => {
                        
                     </div>
                 </div>
-                <div className="banner-social">
-                <   div className="border-line" />
-                    <ul className="list-unstyled social-icon">
-                        <li><a href="https://facebook.com/"><FaFacebookF /> Facebook</a></li>
-                        <li><a href="https://twitter.com/"><FaXTwitter /> twitter</a></li>
-                        <li><a href="https://www.linkedin.com/"><FaLinkedinIn /> Linkedin</a></li>
-                    </ul>
-                </div>
+               
             </div>
             <ul className="list-unstyled shape-group-19">
                 <li className="shape shape-1">

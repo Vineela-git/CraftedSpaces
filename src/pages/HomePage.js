@@ -4,10 +4,10 @@ import Footer from '../common/footer/Footer';
 import SEO from '../common/SEO';
 import AboutHomePage from '../component/about/AboutHomePage.js';
 import BannerHome from '../component/banner/BannerHome';
-import CtaLayoutHome from '../component/cta/CtaLayoutHome';
+
 import ProjectHome from '../component/project/ProjectHome';
-import ServiceHome from '../component/service/ServiceHome';
-import SectionTitle from '../elements/section-title/SectionTitle';
+import ServiceOne from './ServiceOne';
+
 import ColorSwitcher from '../elements/switcher/ColorSwitcher';
 
 
@@ -21,7 +21,9 @@ const HomePage = () => {
         <main className="main-wrapper">
             <Header />
             <BannerHome />
-            <div className="section section-padding-2 bg-color-dark">
+            <AboutHomePage />
+                    <ServiceOne/>
+            {/* <div className="section section-padding-2 bg-color-dark">
                 <div className="container">
                     <SectionTitle 
                         subtitle="What We Can Do For You"
@@ -30,7 +32,8 @@ const HomePage = () => {
                         textAlignment="heading-light-left"
                         textColor=""
                     />
-                    <div className='row'>
+                   
+                     <div className='row'>
                         <ServiceHome colSize="col-xl-4 col-md-6" serviceStyle="" itemShow="6" />
                     </div>
                 </div>
@@ -39,11 +42,11 @@ const HomePage = () => {
                     <li className="shape shape-2"><img src={process.env.PUBLIC_URL + "/images/others/bubble-42.png"} alt="Circle" /></li>
                     <li className="shape shape-3"><img src={process.env.PUBLIC_URL + "/images/others/bubble-43.png"} alt="Circle" /></li>
                 </ul>
-            </div>
-            <AboutHomePage />
+            </div> */}
+            
             <ProjectHome />
            
-            <CtaLayoutHome /> 
+          
         <Footer parentClass="" />
         </main>
         </>

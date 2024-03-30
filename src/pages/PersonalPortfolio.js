@@ -3,6 +3,7 @@ import HeaderThree from '../common/header/HeaderThree';
 import SEO from '../common/SEO';
 import BannerPortfolio from '../component/banner/BannerPortfolio';
 import ProjectThree from '../component/project/ProjectThree';
+import ProjectHome from '../component/project/ProjectHome';
 import SectionTitle from '../elements/section-title/SectionTitle';
 import ColorSwitcher from '../elements/switcher/ColorSwitcher';
 import ProjectTwo from '../component/project/ProjectTwo';
@@ -20,6 +21,7 @@ const PersonalPortfolio = () => {
             <BannerPortfolio/>
             <ProjectThree/>
             <ProjectTwo/>
+            <ProjectHome/>
 
         
             <div className="section-padding bg-color-dark">
