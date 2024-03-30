@@ -11,7 +11,7 @@ const BannerOne = () => {
                 <div className="row align-items-end align-items-xl-start">
                     <div className="col-lg-6">
                         <div className="banner-content">
-                            <AnimationOnScroll animateIn="fadeInUp" duration={1} animateOnce={true} delay={100}>
+                            <AnimationOnScroll animateIn="fadeInUp" animateOnce={true}>
                                 <h1 className="title">Craft Your Next Space With Ease</h1>
                                 <span className="subtitle">Constructing Connections. Building Dreams.</span>
                                 <Link to={process.env.PUBLIC_URL + "/login"} className="axil-btn btn-fill-primary btn-large">Login Here</Link>

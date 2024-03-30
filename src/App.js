@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, BrowserRouter} from 'react-router-dom';
 import ScrollToTop from './component/scrollToTop/ScrollToTop';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -19,7 +19,7 @@ import './assets/scss/app.scss';
 
 const App = () => {
   return (
-    <Router>
+	<BrowserRouter>
 		<ScrollToTop>
 			<Routes>
 				<Route path={process.env.PUBLIC_URL + "/"} element={<HomePage />}/>
@@ -35,7 +35,7 @@ const App = () => {
 
 			</Routes>
 		</ScrollToTop>
-    </Router>
+	</BrowserRouter>
   )
 }
 

@@ -1,5 +1,6 @@
 import React, { useRef, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from "axios";
 
 
 const FormOne = () => {
@@ -11,24 +12,27 @@ const FormOne = () => {
     const form = useRef();
 
     const [ result, showresult ] = useState(false);
+    const[email, setEmail] = useState();
+    const[password, setPassword] = useState();
+    const navigate = useNavigate();
+
 
    
 //prevents the default form submission behavior, which is a page reload
 //Once you've prevented the default behavior, you can execute custom logic
 
-      const handleLogin = (e) => {
+
+      const handleLogin = async(e) => {
         e.preventDefault();
         
+await axios.post("http://localhost:3001/login", {email,password})
+.then(result => {console.log(result)
+    if(result.data==="success"){
+navigate("/ ")}})
+.catch(err => console.log(err));
         // Normally would call API and validate credentials
         // For now, we're just simulating login
-    
-        setLoggedIn(true);
-
-        setUser({
-          name:'John',
-          email: 'john@email.com',
-          password: 'pass'
-        });
+       
       }
         
 
@@ -38,10 +42,10 @@ const FormOne = () => {
 
 //To navigate to signup page when the button gets clicked. 
 
-        const navigate = useNavigate();
         const handleSignup = () => {
             navigate('/signup');
           }
+       
 
           if(!loggedIn) {
           
@@ -52,11 +56,11 @@ const FormOne = () => {
         
         <div id="login" className="form-group">
             <label>Email</label>
-            <input type="email" className="form-control" name="contact-email" placeholder="example@mail.com" required />
+            <input type="email" className="form-control" name="contact-email" placeholder="example@mail.com" onChange={(e)=>setEmail(e.target.value)} required />
         </div>
         <div className="form-group mb--40">
             <label>Password</label>
-            <input type="password" className="form-control" name="password" placeholder="........" required />
+            <input type="password" className="form-control" name="password" placeholder="........" onChange={(e)=>setPassword(e.target.value)} required />
         </div>
         
         <div className="form-group mb--40"><label><a href="#">Forgot Password?</a></label>
