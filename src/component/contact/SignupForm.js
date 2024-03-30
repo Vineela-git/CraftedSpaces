@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from 'react';
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 function SignupForms() {
@@ -42,8 +44,10 @@ function UserSignupForm() {
         email: '', 
         phone: '',
         location: '',
-        address: '' 
+        address: '' ,
+        password: ''
       });
+      const navigate =useNavigate();
     
       const handleChange = (e) => {
         e.preventDefault();
@@ -55,6 +59,11 @@ function UserSignupForm() {
      
       const handleSubmit = (e) => {
         e.preventDefault();
+axios.post("http://localhost:3001/signup",values)
+.then(result => {console.log(result)
+navigate('/login')
+})
+.catch(err => console.log(err));
         // Send form data to API
       }
     
@@ -67,6 +76,7 @@ function UserSignupForm() {
           <input type="tel" name="phone" value={values.phone} placeholder="Phone Number" onChange={handleChange} required />
           <input type="text" name="location" value={values.location} placeholder="Location" onChange={handleChange} />
           <input type="text" name="address" value={values.address} placeholder="Address" onChange={handleChange}/>
+          <input type="text" name="password" value={values.password} placeholder="Password" onChange={handleChange}/>
           <button type="submit" className="axil-btn btn-fill-primary btn-fluid btn-primary"style={{marginBlock: 10}}>Sign Up</button>
         </form>
         </div>
