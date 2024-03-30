@@ -122,6 +122,22 @@ input {
     margin-bottom: 0;
 }
 
+.button-container{
+    display: flex;
+    flex-direction: column; /* Align buttons vertically */
+    gap: 20px; /* Add space between buttons */
+    justify-content: center; /* Center-align buttons horizontally */
+
+}
+
+.axil-btn{
+    max-width: 300px; /* Adjust the maximum width as needed */
+    width: 100%; /* Make sure the button takes up full width within the container */
+    justify-content: center; /* Center-align buttons horizontally */
+    display: flex;
+    flex-direction: column; /* Align buttons vertically */
+    align-items: center;
+}
 
 
 

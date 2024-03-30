@@ -69,4 +69,15 @@
     &.btn-fluid {
         width: 100%;
     }
+
+    &.axil-btn.btn-large.btn-fill-white {
+        margin: 0 auto;
+        display: block;
+      }
+      &.section-heading.heading-light {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
 }

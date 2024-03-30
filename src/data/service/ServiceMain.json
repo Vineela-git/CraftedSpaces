@@ -1,7 +1,8 @@
 [
     {
         "image": "/images/icon/icon-1.png",
-        "title": "Project Planning and Design",
+        "title": "Architect",
+        "cate": "architect",
         "description": "We provide assistance with project planning and design, including architectural design, structural engineering, and site planning.",
         "process": {
             "sectionSub": "Process"
@@ -9,8 +10,70 @@
         }
     },
     {
+        "image": "/images/icon/icon-1.png",
+        "title": "Conceptual Design",
+        "cate": "conceptual-design",
+        "description": "We coordinate with contractors, consultants, and vendors to keep your project on schedule, within budget, and up to quality standards.",
+        "process": {
+            "sectionSub": "Process"
+    
+        }
+    },
+    {
+        "image": "/images/icon/icon-1.png",
+        "title": "Project Management",
+        "cate": "project-management",
+        "description": "Our team of architects collaborates closely with clients to translate their vision into tangible design concepts",
+        "process": {
+            "sectionSub": "Process"
+    
+        }
+    },
+
+    {
+        "image": "/images/icon/icon-1.png",
+        "title": "Feasibility Studies",
+        "cate": "feasibility-studies",
+        "description": " We evaluate site conditions, regulatory requirements, and economic factors to ensure that your project is both practical and sustainable.",
+        "process": {
+            "sectionSub": "Process"
+    
+        }
+    },
+    
+
+    
+
+    {
         "image": "/images/icon/icon-2.png",
-        "title": "Construction Management",
+        "title": "Builder",
+        "cate": "builder",
+        "description": "We offer construction management services to oversee and coordinate all aspects of the construction process. ",
+        "process": {
+            "sectionSub": "Process"
+        }
+    },
+    {
+        "image": "/images/icon/icon-2.png",
+        "title": "Site Preparation",
+        "cate": "site-preparation",
+        "description": " Our expert builders prepare construction sites for smooth and efficient execution and ready for construction activities. ",
+        "process": {
+            "sectionSub": "Process"
+        }
+    },
+    {
+        "image": "/images/icon/icon-2.png",
+        "title": "Structural Assembly",
+        "cate": "structural-assembly",
+        "description": "Our skilled builders handle the assembly of structural components, including walls, floors, and roofs."
+        
+    },
+   
+    {
+        "image": "/images/icon/icon-2.png",
+        "title": "Customization and Special Projects",
+        "cate": "customization-and-special-projects",
         "description": "We offer construction management services to oversee and coordinate all aspects of the construction process. ",
         "process": {
             "sectionSub": "Process"
@@ -19,14 +82,16 @@
     {
         "image": "/images/icon/icon-3.png",
         "title": "Material Sourcing Consult",
-        "description": "Help you with source construction materials, equipment and everything you need from reliable suppliers at competitive prices",
+        "cate": "material-sourcing-consult",
+        "description": "We thrive on challenges and welcome custom projects that require innovative solutions.",
         "process": {
             "sectionSub": "Process"
         }
     },
     {
         "image": "/images/icon/icon-4.png",
-        "title": "Interior Design Consultation",
+        "title": "Interiors",
+        "cate": "interiors",
         "description": "We offer personalized interior design consultation services and showcase varied portfolios to help clients conceptualize and plan their interior spaces.",
         "process": {
             "sectionSub": "Process"
@@ -35,6 +100,7 @@
     {
         "image": "/images/icon/icon-5.png",
         "title": "Styling and Decor",
+        "cate": "styling-and-decor",
         "description": "We offer styling and decor services to add finishing touches to interior spaces. Assist with accessorizing, art selection, and decor to enhance the overall aesthetic appeal of space.",
         "process": {
             "sectionSub": "Process"
@@ -43,12 +109,56 @@
     {
         "image": "/images/icon/icon-6.png",
         "title": "Post-Construction Services",
+        "cate":"post-construction-services",
         "description": "We provide post-construction services such as inspections, maintenance to ensure the long-term success and sustainability of projects. ",
         "process": {
             "sectionSub": "Process"
         }
-    }
+    },
+ 
+  
+    {
+        "image": "/images/icon/icon-4.png",
+        "title": "Interior Designers",
+        "cate":"interior-designers",
+        "description": "Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.",
+        "process": {
+            "sectionSub": "Process"
+          
+        }
+    },   
 
+    {
+        "image": "/images/icon/icon-4.png",
+        "title": "Space Planning and Layout Design",
+        "cate":"space-planning-and-layout-design",
+        "description": "We specialize in optimizing spatial layouts to enhance functionality and flow within your space.",
+        "process": {
+            "sectionSub": "Process"
+          
+        }
+    },
     
+    {
+        "image": "/images/icon/icon-4.png",
+        "title": "Color Palette and Material Selection",
+        "cate":"color-palette-and-material-selection",
+        "description": " From wall colors to flooring materials, our designers assist you in selecting the perfect palette and materials to achieve your desired aesthetic.",
+        "process": {
+            "sectionSub": "Process"
+          
+        }
+    } ,
     
+    {
+        "image": "/images/icon/icon-4.png",
+        "title": "Customized Design Solutions",
+        "cate":"customized-design-solutions",
+        "description": "We understand that every space is unique, which is why we offer customized design solutions tailored to your specific requirements.",
+        "process": {
+            "sectionSub": "Process"
+          
+        }
+    }  
+
 ]

@@ -16,12 +16,12 @@ function SignupForms() {
   return (
     <div> 
        <div> 
-           <p>Click here to register if you're a client looking for Professional </p>
+           {/* <p>Click here to register if you're a client looking for Professional </p> */}
            <button className="axil-btn btn-fill-primary btn-fluid btn-primary"  onClick={handleUserClick}>User</button>
        </div>
        <div >
            <button className="axil-btn btn-fill-primary btn-fluid btn-primary" style={{marginBlock: 10}} onClick={handleProfessionalClick}>Professional</button>
-           <p> Click here if You're a Professional to setup your Portfolio</p>
+           {/* <p> Click here if You're a Professional to setup your Portfolio</p> */}
 
        </div>
       {formType === 'user' && (

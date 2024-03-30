@@ -3,9 +3,9 @@ import Footer from '../common/footer/Footer';
 import Header from '../common/header/Header';
 import SEO from '../common/SEO';
 import BannerBuilders from '../component/banner/BannerBuilders';
-import CtaLayoutHome from '../component/cta/CtaLayoutHome';
-import ProjectBuilders from '../component/project/ProjectBuilders';
+import CtaLayoutBuilders from '../component/cta/CtaLayoutBuilders';
 import ColorSwitcher from '../elements/switcher/ColorSwitcher';
+import ProjectGridTwo from './ProjectGridTwo';
 
 const Builders = () => {
 
@@ -16,8 +16,8 @@ const Builders = () => {
         <main className="main-wrapper">
         <Header/>
         <BannerBuilders/>
-        <ProjectBuilders />
-        <CtaLayoutHome/>
+        <ProjectGridTwo/>
+        <CtaLayoutBuilders/>
         <Footer />
         </main>
         </>
