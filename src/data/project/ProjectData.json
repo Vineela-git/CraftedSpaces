@@ -142,5 +142,62 @@
         "category": ["2020"],
         "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
         "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 19,
+        "image": "/images/project/project-13.png",
+        "title": "Green Acres Residence",
+        "category": "A sustainable single-family home.",
+        "excerpt": "A sustainable single-family home.",
+        "body":"A sustainable single-family home."
+    },
+
+    {
+        "id": 19,
+        "image": "/images/project/project-13.png",
+        "title": "Square Desgins",
+        "category": "A sustainable single-family home.",
+        "excerpt": "A sustainable single-family home.",
+        "body":"A sustainable single-family home."
+    },
+    {
+        "id": 20,
+        "image": "/images/project/project-14.png",
+        "title": "SkyView Mall Redevelopment",
+        "category": "A revitalization project transforming an outdated mall into a modern retail destination.",
+        "excerpt": "A revitalization project transforming an outdated mall into a modern retail destination.",
+        "body":"A revitalization project transforming an outdated mall into a modern retail destination."
+    },
+    {
+        "id": 21,
+        "image": "/images/project/project-15.png",
+        "title": "Cityscape Corporate Center",
+        "category": "A modern office tower offering innovative workspace solutions and panoramic city views.",
+        "excerpt": "A modern office tower offering innovative workspace solutions and panoramic city views.",
+        "body":"A modern office tower offering innovative workspace solutions and panoramic city views."
+    },
+    {
+        "id": 21,
+        "image": "/images/project/project-16.png",
+        "title": "CityCenter Entertainment District",
+        "category": "An entertainment complex featuring theaters, restaurants, and nightlife attractions in the heart of the city.",
+        "excerpt": "An entertainment complex featuring theaters, restaurants, and nightlife attractions in the heart of the city.",
+        "body":"An entertainment complex featuring theaters, restaurants, and nightlife attractions in the heart of the city."
+    },
+    {
+        "id": 22,
+        "image": "/images/project/project-17.png",
+        "title": "CosmoCoffee Shop",
+        "category": "A cozy coffee shop to improve functionality and create a welcoming atmosphere.",
+        "excerpt": "A cozy coffee shop to improve functionality and create a welcoming atmosphere.",
+        "body":"A cozy coffee shop to improve functionality and create a welcoming atmosphere."
+    },
+    {
+        "id": 23,
+        "image": "/images/project/project-18.png",
+        "title": "PlayfulPaws Pet Shelter Renovation",
+        "category": "Renovating a pet shelter to improve animal welfare and create a more welcoming environment for pets",
+        "excerpt": "Renovating a pet shelter to improve animal welfare and create a more welcoming environment for pets",
+        "body":"Renovating a pet shelter to improve animal welfare and create a more welcoming environment for pets"
     }
 ]
