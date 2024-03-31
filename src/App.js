@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, BrowserRouter} from 'react-router-dom';
 import ScrollToTop from './component/scrollToTop/ScrollToTop';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -14,12 +14,13 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import PersonalPortfolio from './pages/PersonalPortfolio';
 import UserLoginHome from './pages/UserLoginHome';
+import ProfessionalAccountEdit from './pages/ProfessionalAccountEdit';
 
 import './assets/scss/app.scss';
 
 const App = () => {
   return (
-    <Router>
+	<BrowserRouter>
 		<ScrollToTop>
 			<Routes>
 				<Route path={process.env.PUBLIC_URL + "/"} element={<HomePage />}/>
@@ -32,10 +33,11 @@ const App = () => {
 				<Route path={process.env.PUBLIC_URL+"/contact-us"} element={<Contact/>}/>
 				<Route path={process.env.PUBLIC_URL+"/portfolio"} element={<PersonalPortfolio/>}/>
 				<Route path={process.env.PUBLIC_URL+"/userhome"} element={<UserLoginHome/>}/>
+				<Route path={process.env.PUBLIC_URL+"/profile-edit"} element={<ProfessionalAccountEdit/>}/>
 
 			</Routes>
 		</ScrollToTop>
-    </Router>
+	</BrowserRouter>
   )
 }
 
