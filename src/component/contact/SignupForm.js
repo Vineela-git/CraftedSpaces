@@ -70,7 +70,7 @@ navigate('/login')
       return (
         <div> 
          
-        <form onSubmit={handleSubmit} class ="form-control">
+        <form onSubmit={handleSubmit} className ="form-control">
           <input type="text" name="fullname" value={values.fullname} placeholder="Name" onChange={handleChange} required />
           <input type="email" name="email" value={values.email} placeholder="E-mail" onChange={handleChange} required />
           <input type="tel" name="phone" value={values.phone} placeholder="Phone Number" onChange={handleChange} required />

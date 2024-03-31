@@ -31,11 +31,11 @@ userdetailsModel.findOne({email: email})
       res.json("success")
     }
     else{
-      res.json("not the right password")
+      res.json("wrong pass")
     }
   }
   else{
-    res.json("No records found, Please sign up first!")
+    res.json("not found")
   }
 })
 }catch{

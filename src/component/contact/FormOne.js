@@ -1,7 +1,7 @@
 import React, { useRef, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
-
+import UserLoginHome from '../../pages/UserLoginHome';
 
 const FormOne = () => {
 
@@ -14,6 +14,8 @@ const FormOne = () => {
     const [ result, showresult ] = useState(false);
     const[email, setEmail] = useState();
     const[password, setPassword] = useState();
+    const [errorMessage, setErrorMessage] = useState('');
+
     const navigate = useNavigate();
 
 
@@ -28,8 +30,16 @@ const FormOne = () => {
 await axios.post("http://localhost:3001/login", {email,password})
 .then(result => {console.log(result)
     if(result.data==="success"){
-navigate("/ ")}})
-.catch(err => console.log(err));
+navigate("/userhome")}
+else if(result.data==="wrong pass"){
+    setErrorMessage("Invalid password");
+}
+else{
+    setErrorMessage("User not found");  
+}})
+.catch(err => console.log(err),
+// setErrorMessage("An error occurred while logging in. Please try again later.")
+);
         // Normally would call API and validate credentials
         // For now, we're just simulating login
        
@@ -68,6 +78,8 @@ navigate("/ ")}})
 
         <div className="form-group">
             <button type="login" className="axil-btn btn-fill-primary btn-fluid btn-primary" name="login-btn">Login</button>
+            {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+
         </div>
     
         <div className="form-group"> Don't have an account? <a href="/signup">Sign up here</a> </div>
