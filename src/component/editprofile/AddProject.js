@@ -63,7 +63,7 @@ const FormThree = () => {
             <textarea name="contact-message" id="contact-message" className="form-control textarea" cols="30" rows="6"></textarea>
         </div>
         <div className="form-group text-end">
-            <button type="submit" className="axil-btn btn-fill-primary w-auto btn-primary" name="submit-btn">SEND</button>
+            <button type="submit" className="axil-btn btn-fill-primary w-auto btn-primary" name="submit-btn">Update</button>
         </div>
         <div className="form-group">
             {result ? <Result /> : null}
