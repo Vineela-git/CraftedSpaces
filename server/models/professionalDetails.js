@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
-const userSchema = new mongoose.Schema({
-  fname: String,
-  lname: String,
+const professionalSchema = new mongoose.Schema({
+  fullname: String,
   email: String,
   phone: String,
+  company: String,
   address1: String,
   address2: String,
   city: String,
@@ -13,9 +13,9 @@ const userSchema = new mongoose.Schema({
   password: String,
   userorprof: {
     type: String,
-    default: "user",
+    default: "professional",
   },
 });
 
-const userdetailsModel = mongoose.model("users", userSchema);
-module.exports = userdetailsModel;
+const professionalModel = mongoose.model("professionals", professionalSchema);
+module.exports = professionalModel;
