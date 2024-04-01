@@ -40,11 +40,14 @@ function SignupForms() {
 function UserSignupForm() {
 
       const [values, setValues] = useState({
-        fullname: '',
+        firstname: '',
+        lastname:'',
         email: '', 
         phone: '',
-        location: '',
         address: '' ,
+        city: '',
+        state:'',
+        zipcode:'',
         password: ''
       });
       const navigate =useNavigate();
@@ -59,11 +62,11 @@ function UserSignupForm() {
      
       const handleSubmit = (e) => {
         e.preventDefault();
-axios.post("http://localhost:3001/signup",values)
-.then(result => {console.log(result)
+        axios.post("http://localhost:3001/signup",values)
+       .then(result => {console.log(result)
 navigate('/login')
-})
-.catch(err => console.log(err));
+       })
+      .catch(err => console.log(err));
         // Send form data to API
       }
     
@@ -88,11 +91,16 @@ navigate('/login')
 function ProfessionalSignupForm() {
 //All the properties are set to empty strings. 
         const [values, setValues] = useState({ 
-          fullname: '',
+          companyname:'',
+          firstname: '',
+          lastname: '',
           email: '',
-          PhoneNumber:'',
-          title: '',
-          CompanyName: '',
+          officephone:'',
+          personalphone:'',
+          address: '',
+          city:'',
+          state:'',
+          zipcode:'',
           yearsOfExperience: '',
           LicenseNumber:''
         });
@@ -112,13 +120,92 @@ function ProfessionalSignupForm() {
         return (
           <div>
           <form onSubmit={handleSubmit} class="form-control">
-          
-            <input type="text" name="fullname" value={values.fullname} placeholder="Name" onChange={handleChange} required />
-            <input type="email" name="email" value={values.email} placeholder="Email" onChange={handleChange}  required />
-            <input type="tel" name="PhoneNumber"  value={values.PhoneNumber} placeholder="PhoneNumber" onChange={handleChange} required />
-            <input type="text" name="CompanyName"  value={values.CompanyName} placeholder="Company Name" onChange={handleChange} required/>
-            <input type="text" name="Location" value={values.Location} placeholder="Location" onChange={handleChange} required/>
-            <input type="text"  name="LicenseNumber" value={values.LicenseNumber} placeholder="License Number" onChange={handleChange} required />
+            <label>Company Name</label>
+                   <input type="text" 
+                   name="companyname" 
+                   value={values.companyname} 
+                   placeholder="Company Name" 
+                   onChange={handleChange} 
+                   required />
+            <label>First Name</label>
+                   <input type="text" 
+                   name="firstname" 
+                   value={values.firstname} 
+                   placeholder="First Name" 
+                   onChange={handleChange} 
+                   required />
+            <label>Last Name</label>
+                   <input type="text" 
+                    name="lastname" 
+                    value={values.lastname} 
+                    placeholder="Last Name" 
+                    onChange={handleChange} 
+                    required />
+            <label>Office Email</label>
+                   <input type="email" 
+                    name="email" 
+                    value={values.email} 
+                    placeholder="Email" 
+                    onChange={handleChange}  
+                    required />
+            <label>Office Phone</label>
+                    <input type="tel" 
+                    name="officephone"  
+                    value={values.officenumber} 
+                    placeholder="Office Number" 
+                    onChange={handleChange} 
+                    required />
+            <label>Personal Phone</label>
+                    <input type="tel" 
+                    name="personalphone"  
+                    value={values.personalnumber} 
+                    placeholder="Personal Number" 
+                    onChange={handleChange} 
+                    required />
+            <label>Address</label>
+                    <textarea className="form-control textarea" 
+                      id="address" 
+                      name="address" 
+                      rows="6" 
+                      value={values.address}
+                      onChange={handleChange}>
+                    </textarea>
+            <label>City</label>
+                    <input type="text" 
+                      name="city"  
+                    value={values.city} 
+                    placeholder="City" 
+                    onChange={handleChange} 
+                    required />
+            <label>State</label>
+                  <input type="text" 
+                  name="state"  
+                    value={values.state} 
+                    placeholder="State" 
+                    onChange={handleChange} 
+                    required />
+            <label>ZipCode</label>
+                    <input type="text" 
+                      name="zipcode"  
+                    value={values.zipcode} 
+                    placeholder="ZipCode" 
+                    onChange={handleChange} 
+                    required />
+            <label>Enter your Company Registration Number here: </label>
+                   <input type="text"  
+                   name="LicenseNumber" 
+                   value={values.LicenseNumber} 
+                   placeholder="License Number" 
+                   onChange={handleChange} 
+                   required />
+            <label>How Many years have you been in the Industry?</label>
+                   <input type="number"  
+                   name="yearsOfExperience" 
+                   value={values.yearsOfExperience} 
+                   placeholder="" 
+                   onChange={handleChange} 
+                   required />
+            
             <button type="submit"className="axil-btn btn-fill-primary btn-fluid btn-primary"style={{marginBlock: 10}}>Sign Up</button>
           </form>
           </div>

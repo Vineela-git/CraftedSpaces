@@ -29,8 +29,9 @@ const FormThree = () => {
       zipcode:''
     });
 
+// We use the useEffect hook to update the form data (formData) with the user's information as placeholders 
+// when the user prop changes.
 
-    // Update form data with user's information as placeholders
   useEffect(() => {
     if (user) {
       setFormData({
@@ -65,6 +66,7 @@ const FormThree = () => {
             showresult(false);
         }, 5000);
 
+// The handleChange function updates the form data state (formData) as the user types into the input fields.
         const handleChange = (e) => {
           setFormData({
             ...formData,
@@ -93,7 +95,7 @@ const FormThree = () => {
                          name="firstname"
                         value={formData.firstname}
                         onChange={handleChange} 
-                        placeholder="First Name" 
+                        
                         required />
                 </div>
                 <div className="col-md-6">
@@ -104,7 +106,7 @@ const FormThree = () => {
                          name="lastname" 
                          value={formData.lastname}
                           onChange={handleChange}
-                         placeholder="Last Name" required />
+                          required />
                 </div> 
               </div>
 
@@ -118,7 +120,7 @@ const FormThree = () => {
                          name="email" 
                          value={formData.email}
                          onChange={handleChange}
-                        placeholder="Email" 
+                         
                          required />
                 </div>
                 <div className="col-md-6">
@@ -129,7 +131,7 @@ const FormThree = () => {
                          name="phone" 
                          value={formData.phone}
                          onChange={handleChange}
-                         placeholder="phone" required />
+                          required />
                 </div>
               </div>
 
@@ -141,8 +143,8 @@ const FormThree = () => {
                             name="address" 
                             rows="6" 
                             value={formData.address}
-                            onChange={handleChange}
-                            placeholder="Address"></textarea>
+                            onChange={handleChange}>
+                            </textarea>
                 </div>
                 <div className="col-md-6">
                   <label htmlFor="pincode">City</label>
@@ -152,7 +154,7 @@ const FormThree = () => {
                          name="city" 
                          value={formData.city}
                          onChange={handleChange}
-                         placeholder="City" 
+                         
                          required />
                 </div>        
               </div>
@@ -166,7 +168,7 @@ const FormThree = () => {
                          name="state" 
                          value={formData.state}
                          onChange={handleChange}
-                         placeholder="State" required />
+                         required />
                 </div> 
                 <div className="col-md-6">
                   <label htmlFor="pincode">Zipcode/Pincode</label>
@@ -176,7 +178,7 @@ const FormThree = () => {
                          name="zipcode" 
                          value={formData.zipcode}
                          onChange={handleChange}
-                         placeholder="Zipcode" 
+                         
                          required />
                 </div>        
               </div>
@@ -212,3 +214,8 @@ const FormThree = () => {
 }
 
 export default FormThree;
+
+
+
+// The FormThree component now accepts a user prop, which contains the user's information.
+// Input fields are now controlled components, with their value attributes set to the corresponding values from formData.
