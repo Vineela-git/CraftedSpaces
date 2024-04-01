@@ -28,7 +28,8 @@ const FormOne = () => {
         if (result.data === "usersuccess") {
           navigate("/userhome");
         } else if (result.data === "success") {
-          navigate("/");
+          //Add Professional Edit page here
+          navigate("/professionalhome");
         } else if (result.data === "invalid password") {
           setErrorMessage("invalid password");
         }

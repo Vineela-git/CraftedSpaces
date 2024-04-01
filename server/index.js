@@ -15,7 +15,7 @@ app.post("/signup", async (req, res) => {
   
   try {
     const userData = req.body;
-    if(userData.company){
+    if(userData.companyname){
       professionalModel.create(userData)
       .then((professionals)=> res.json(professionals))
       .catch((err)=>res.json(err))
