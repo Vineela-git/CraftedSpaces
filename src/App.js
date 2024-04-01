@@ -14,7 +14,9 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import PersonalPortfolio from './pages/PersonalPortfolio';
 import UserLoginHome from './pages/UserLoginHome';
+import ProfessionalLoginHome from './pages/ProfessionalLoginHome';
 import ProfessionalAccountEdit from './pages/ProfessionalAccountEdit';
+
 
 import './assets/scss/app.scss';
 
@@ -33,6 +35,7 @@ const App = () => {
 				<Route path={process.env.PUBLIC_URL+"/contact-us"} element={<Contact/>}/>
 				<Route path={process.env.PUBLIC_URL+"/portfolio"} element={<PersonalPortfolio/>}/>
 				<Route path={process.env.PUBLIC_URL+"/userhome"} element={<UserLoginHome/>}/>
+				<Route path={process.env.PUBLIC_URL+"/professionalhome"} element={<ProfessionalLoginHome/>}/>
 				<Route path={process.env.PUBLIC_URL+"/profile-edit"} element={<ProfessionalAccountEdit/>}/>
 
 			</Routes>
