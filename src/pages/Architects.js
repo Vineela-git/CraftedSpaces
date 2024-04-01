@@ -5,7 +5,7 @@ import SEO from '../common/SEO';
 import BannerArchitects from '../component/banner/BannerArchitects';
 
 import ProjectArchitects from '../component/project/ProjectArchitects';
-import Architectsone from './Architectsone.js';
+
 import ColorSwitcher from '../elements/switcher/ColorSwitcher';
 
 
@@ -18,7 +18,7 @@ const Architects = () => {
             <main className="main-wrapper">
             <HeaderArchitect />
             <BannerArchitects />
-                    <Architectsone />
+                    
         
     
             {/* <div className="section section-padding-2 bg-color-dark">
