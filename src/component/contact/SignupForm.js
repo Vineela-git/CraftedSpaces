@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 function SignupForms() {
   const [formType, setFormType] = useState();
-
   const handleUserClick = () => {
     setFormType("user");
   };
@@ -55,6 +54,7 @@ function UserSignupForm() {
 
     password: "",
   });
+  const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -70,8 +70,13 @@ function UserSignupForm() {
     axios
       .post("http://localhost:3001/signup", values)
       .then((result) => {
-        console.log(result);
-        navigate("/login");
+        if(result.data==="existing"){
+          setErrorMessage("Already existing user, try logging in");
+        }else{
+          console.log(result);
+          navigate("/login");
+        }
+        
       })
       .catch((err) => console.log(err));
     // Send form data to API
@@ -125,6 +130,8 @@ function UserSignupForm() {
           placeholder="Password"
           onChange={handleChange}
         />
+                {errorMessage && <div className="error"> {errorMessage} </div>}
+
         <button
           type="submit"
           className="axil-btn btn-fill-primary btn-fluid btn-primary"
@@ -154,6 +161,7 @@ function ProfessionalSignupForm() {
     licensenumber: "",
     password: "",
   });
+  const [errorMessage, setErrorMessage] = useState("");
 const navigate = useNavigate();
   const handleChange = (e) => {
     e.preventDefault();
@@ -168,8 +176,13 @@ const navigate = useNavigate();
     axios
       .post("http://localhost:3001/signup", values)
       .then((result) => {
-        console.log("result");
+        if(result.data==="existing"){
+          setErrorMessage("Already existing user, try logging in");
+        }else{
+ console.log("result");
         navigate("/login");
+        }
+       
       })
       .catch((err) => {
         console.log(err);
@@ -295,6 +308,7 @@ const navigate = useNavigate();
           onChange={handleChange}
           required
         />
+        {errorMessage && <div className="error"> {errorMessage} </div>}
 
         <button
           type="submit"

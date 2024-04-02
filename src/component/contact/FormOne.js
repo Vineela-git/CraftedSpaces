@@ -30,7 +30,7 @@ const FormOne = () => {
         } else if (result.data === "success") {
           //Add Professional Edit page here
           navigate("/professionalhome");
-        } else if (result.data === "invalid password") {
+        } else if (result.data === "invalid") {
           setErrorMessage("invalid password");
         }
         else{
