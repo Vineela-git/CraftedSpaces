@@ -56,6 +56,7 @@ const ProjectOne = ({parentClass, colSize, itemShow, columnGap}) => {
 			}
         }
         setVisibleItems(tempData);
+		console.log(tempData);
     };
 
 
