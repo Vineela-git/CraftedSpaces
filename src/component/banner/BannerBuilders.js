@@ -10,26 +10,19 @@ const BannerFour = () => {
         <div className="banner banner-style-4" style={{backgroundImage:`url(${process.env.PUBLIC_URL + "/images/banner/banner-thumb-7.png"})`}}>
         
             <div className="container">
-                        <div className="banner-content">    
-                            <h1 className="title">Crafting Dreams into Concrete Reality</h1>
-                            <p>Your Trusted Partners in Construction.</p>
-                          
-                        </div>
+                <div className="banner-content">    
+                    <h1 className="title">Crafting Dreams into Concrete Reality</h1>
+                    <p>Your Trusted Partners in Construction.</p>
                     
+                </div>
+                
                 <div className="banner-thumbnail">
                     <div className="large-thumb">
 
                        
                     </div>
                 </div>
-                <div className="banner-social">
-                <   div className="border-line" />
-                    <ul className="list-unstyled social-icon">
-                        <li><a href="https://facebook.com/"><FaFacebookF /> Facebook</a></li>
-                        <li><a href="https://twitter.com/"><FaXTwitter /> twitter</a></li>
-                        <li><a href="https://www.linkedin.com/"><FaLinkedinIn /> Linkedin</a></li>
-                    </ul>
-                </div>
+               
             </div>
             <ul className="list-unstyled shape-group-19">
                 <li className="shape shape-1">
