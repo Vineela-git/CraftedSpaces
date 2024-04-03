@@ -10,13 +10,17 @@ const BannerFour = () => {
         <div className="banner banner-style-4" style={{backgroundImage:`url(${process.env.PUBLIC_URL + "/images/banner/banner-thumb-7.png"})`}}>
         
             <div className="container">
-                <div className="banner-content">    
-                    <h1 className="title">Crafting Dreams into Concrete Reality</h1>
-                    <p>Your Trusted Partners in Construction.</p>
-                    <div>
-                        <Link to={process.env.PUBLIC_URL + "/project-grid-one"} className="axil-btn btn-fill-primary btn-large">View Showcase</Link>
-                    </div>
-                </div>
+                
+                    
+                        <div className="banner-content">    
+                            <h1 className="title">Crafting Dreams into Concrete Reality</h1>
+                            <p>Your Trusted Partners in Construction.</p>
+                            <div>
+                                <Link to={process.env.PUBLIC_URL + "/project-grid-one"} className="axil-btn btn-fill-primary btn-large">View Showcase</Link>
+                            </div>
+                        </div>
+                    
+                
                 
                 <div className="banner-thumbnail">
                     <div className="large-thumb">

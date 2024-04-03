@@ -7,14 +7,14 @@ const AboutFive = () => {
       <div className="section-padding-equal">
             <div className="container">
                 <div className="row align-items-center">
-                <div className="col-lg-7">
+                <div className="col-lg-5">
                     <div className="about-team">
                     <div className="thumbnail">
-                        <img src={process.env.PUBLIC_URL + "/images/about/about-2.png"} alt="thumbnail" />
+                        <img src={process.env.PUBLIC_URL + "/images/about/about-4.png"} alt="thumbnail" />
                     </div>
                     </div>
                 </div>
-                <div className="col-lg-5">
+                <div className="col-lg-7">
                     <div className="about-team">
                     <div className="section-heading heading-left">
                         <span className="subtitle">Our Team</span>

@@ -11,17 +11,28 @@
     }
     .thumbnail {
         background-color: var(--color-white);
-        border-radius: 30px;
+        border-radius: 60px;
         text-align: center;
-        @media #{$md-layout} {
-           width: 300px;
-        }
-        @media #{$sm-layout} {
-           width: 100%;
-           margin-bottom: 30px;
-        }
-
     }
+    
+    .thumbnail img {
+        max-width: 100%; /* Ensure the image does not exceed its container's width */
+        height: auto; /* Allow the image to maintain its aspect ratio */
+        max-height: 200px; /* Set a maximum height for the image */
+    }
+    
+    @media #{$md-layout} {
+        .thumbnail img {
+            max-height: 100px; /* Adjust height for medium-sized screens */
+        }
+    }
+    
+    @media #{$sm-layout} {
+        .thumbnail img {
+            max-height: 80px; /* Adjust height for small-sized screens */
+        }
+    }
+    
     .content {
         flex: 1;
         margin-left: 60px;
