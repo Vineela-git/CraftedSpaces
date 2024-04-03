@@ -12,7 +12,7 @@ const ProjectTwo = () => {
             <div className="container">
             <SectionTitle 
                 subtitle="Case study"
-                title="Selected projects"
+                title="Our projects"
                 description="Nulla facilisi. Nullam in magna id dolor blandit rutrum eget vulputate augue eget risus imperdiet."
                 textAlignment="heading-light-left"
                 textColor=""
@@ -25,9 +25,7 @@ const ProjectTwo = () => {
                 ))}
 
             </div>
-            <div className="more-project-btn">
-                <Link to={process.env.PUBLIC_URL + "/project-grid-two"} className="axil-btn btn-fill-white">Discover More Projects</Link>
-            </div>
+        
         </div>
     </div>
     )

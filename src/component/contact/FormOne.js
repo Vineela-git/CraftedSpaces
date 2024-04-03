@@ -87,8 +87,7 @@ const FormOne = () => {
           <button
             type="login"
             className="axil-btn btn-fill-primary btn-fluid btn-primary"
-            name="login-btn"
-          >
+            name="login-btn">
             Login
           </button>
         </div>

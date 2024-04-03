@@ -13,18 +13,25 @@ function SignupForms() {
     setFormType("professional");
   };
 
+  
+    
+
   return (
     <div>
-      <div>
-        {/* <p>Click here to register if you're a client looking for Professional </p> */}
+      <h4>Click here to register if you're a client looking for Professional! </h4>
+      <div className="signupbutton-container">
+
+        
         <button
-          className="axil-btn btn-fill-primary btn-fluid btn-primary"
-          onClick={handleUserClick}
-        >
-          User
+          className="axil-btn btn-fill-primary btn-fluid btn-primary "
+          onClick={handleUserClick}>User
         </button>
+        
       </div>
-      <div>
+      {formType === "user" && <UserSignupForm />}
+      <div className="user-button-spacing"></div>
+      <h4>Click here to register if you're a Professional looking to Showcase your Portfolio! </h4>
+      <div className="signupbutton-container">
         <button
           className="axil-btn btn-fill-primary btn-fluid btn-primary"
           style={{ marginBlock: 10 }}
@@ -34,7 +41,7 @@ function SignupForms() {
         </button>
         {/* <p> Click here if You're a Professional to setup your Portfolio</p> */}
       </div>
-      {formType === "user" && <UserSignupForm />}
+     
 
       {formType === "professional" && <ProfessionalSignupForm />}
     </div>
@@ -84,7 +91,10 @@ function UserSignupForm() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="form-control">
+      <form onSubmit={handleSubmit} className="signupform-control">
+      <div className="signupform-row">
+        <div className="signupform-field">
+        
         <input
           type="text"
           name="fullname"
@@ -93,6 +103,9 @@ function UserSignupForm() {
           onChange={handleChange}
           required
         />
+        </div>
+
+        <div className="signupform-field">
         <input
           type="email"
           name="email"
@@ -101,6 +114,9 @@ function UserSignupForm() {
           onChange={handleChange}
           required
         />
+        </div>
+
+        <div className="signupform-field">
         <input
           type="tel"
           name="phone"
@@ -109,6 +125,9 @@ function UserSignupForm() {
           onChange={handleChange}
           required
         />
+        </div>
+
+        <div className="signupform-field">
         <input
           type="text"
           name="location"
@@ -116,6 +135,9 @@ function UserSignupForm() {
           placeholder="Location"
           onChange={handleChange}
         />
+        </div>
+
+        <div className="signupform-field">
         <input
           type="text"
           name="address"
@@ -123,6 +145,9 @@ function UserSignupForm() {
           placeholder="Address"
           onChange={handleChange}
         />
+        </div>
+
+        <div className="signupform-field">
         <input
           type="text"
           name="password"
@@ -130,8 +155,9 @@ function UserSignupForm() {
           placeholder="Password"
           onChange={handleChange}
         />
-                {errorMessage && <div className="error"> {errorMessage} </div>}
-
+        </div>
+        </div>
+        <div className="signupform-field signupbutton-container">
         <button
           type="submit"
           className="axil-btn btn-fill-primary btn-fluid btn-primary"
@@ -139,12 +165,15 @@ function UserSignupForm() {
         >
           Sign Up
         </button>
+        </div>
       </form>
     </div>
   );
 }
 
 function ProfessionalSignupForm() {
+
+  
   //All the properties are set to empty strings.
   const [values, setValues] = useState({
     companyname: "",
@@ -163,6 +192,7 @@ function ProfessionalSignupForm() {
   });
   const [errorMessage, setErrorMessage] = useState("");
 const navigate = useNavigate();
+
   const handleChange = (e) => {
     e.preventDefault();
     setValues({
@@ -189,9 +219,13 @@ const navigate = useNavigate();
       });
   };
 
+
+
   return (
     <div>
-      <form onSubmit={handleSubmit} className="form-control">
+      <form onSubmit={handleSubmit} className="signupform-control"> 
+      <div className="signupform-row">
+       <div className="signupform-field">
         <label>Company Name</label>
         <input
           type="text"
@@ -201,6 +235,8 @@ const navigate = useNavigate();
           onChange={handleChange}
           required
         />
+       </div>
+      <div className="signupform-field">
         <label>First Name</label>
         <input
           type="text"
@@ -210,6 +246,8 @@ const navigate = useNavigate();
           onChange={handleChange}
           required
         />
+      </div>
+        <div className="signupform-field">
         <label>Last Name</label>
         <input
           type="text"
@@ -219,6 +257,8 @@ const navigate = useNavigate();
           onChange={handleChange}
           required
         />
+        </div>
+        <div className="signupform-field">
         <label>Office Email</label>
         <input
           type="email"
@@ -228,6 +268,8 @@ const navigate = useNavigate();
           onChange={handleChange}
           required
         />
+        </div>
+        <div className="signupform-field">
         <label>Office Phone</label>
         <input
           type="tel"
@@ -237,6 +279,8 @@ const navigate = useNavigate();
           onChange={handleChange}
           required
         />
+        </div>
+        <div className="signupform-field">
         <label>Personal Phone</label>
         <input
           type="tel"
@@ -245,15 +289,19 @@ const navigate = useNavigate();
           placeholder="Personal Number"
           onChange={handleChange}
         />
+        </div>
+        <div className="signupform-field">
         <label>Address</label>
         <textarea
           className="form-control textarea"
           id="address"
           name="address"
-          rows="6"
+          rows="4"
           value={values.address}
           onChange={handleChange}
         ></textarea>
+        </div>
+        <div className="signupform-field">
         <label>City</label>
         <input
           type="text"
@@ -263,6 +311,8 @@ const navigate = useNavigate();
           onChange={handleChange}
           required
         />
+        </div>
+        <div className="signupform-field">
         <label>State</label>
         <input
           type="text"
@@ -272,6 +322,8 @@ const navigate = useNavigate();
           onChange={handleChange}
           required
         />
+        </div>
+        <div className="signupform-field">
         <label>ZipCode</label>
         <input
           type="text"
@@ -281,6 +333,8 @@ const navigate = useNavigate();
           onChange={handleChange}
           required
         />
+        </div>
+        <div className="signupform-field">
         <label>Enter your Company Registration Number here: </label>
         <input
           type="text"
@@ -290,7 +344,9 @@ const navigate = useNavigate();
           onChange={handleChange}
           required
         />
-        <label>How Many years have you been in the Industry?</label>
+        </div>
+        <div className="signupform-field">
+        <label> Years in the Industry?</label>
         <input
           type="number"
           name="yearsofexperience"
@@ -299,6 +355,8 @@ const navigate = useNavigate();
           onChange={handleChange}
           required
         />
+        </div>
+        <div className="signupform-field">
         <label>Setup Your Password</label>
         <input
           type="password"
@@ -308,15 +366,16 @@ const navigate = useNavigate();
           onChange={handleChange}
           required
         />
-        {errorMessage && <div className="error"> {errorMessage} </div>}
-
+        </div>
+       
+        </div>
+        <div className="signupform-field signupbutton-container">
         <button
           type="submit"
           className="axil-btn btn-fill-primary btn-fluid btn-primary"
-          style={{ marginBlock: 10 }}
-        >
-          Sign Up
+          style={{ marginBlock: 10 }}>Sign Up
         </button>
+        </div>
       </form>
     </div>
   );

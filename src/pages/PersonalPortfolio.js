@@ -2,13 +2,13 @@ import React from 'react';
 import HeaderThree from '../common/header/HeaderThree';
 import SEO from '../common/SEO';
 import BannerPortfolio from '../component/banner/BannerPortfolio';
-import ProjectThree from '../component/project/ProjectThree';
-import ProjectHome from '../component/project/ProjectHome';
+import CompanyDetails from '../pages/CompanyDetails';
 import SectionTitle from '../elements/section-title/SectionTitle';
 import ColorSwitcher from '../elements/switcher/ColorSwitcher';
-import ProjectTwo from '../component/project/ProjectTwo';
+
 import FooterTwo from '../common/footer/FooterTwo';
 import FormThree from '../component/contact/FormThree';
+import ProjectTwo from '../component/project/ProjectTwo';
 
 const PersonalPortfolio = () => {
 
@@ -19,9 +19,10 @@ const PersonalPortfolio = () => {
         <main className="main-wrapper">
             <HeaderThree />
             <BannerPortfolio/>
-            <ProjectThree/>
+            
+            <CompanyDetails/>
+
             <ProjectTwo/>
-            <ProjectHome/>
 
         
             <div className="section-padding bg-color-dark">

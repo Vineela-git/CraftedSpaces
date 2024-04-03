@@ -33,7 +33,7 @@ const App = () => {
 				<Route path={process.env.PUBLIC_URL+"/architects"} element={<Architects/>}/>
 				<Route path={process.env.PUBLIC_URL +"/interior-designers"} element={<InteriorDesigner/>}/>
 				<Route path={process.env.PUBLIC_URL+"/contact-us"} element={<Contact/>}/>
-				<Route path={process.env.PUBLIC_URL+"/portfolio"} element={<PersonalPortfolio/>}/>
+				<Route path={process.env.PUBLIC_URL+"/urbanscape-architects"} element={<PersonalPortfolio/>}/>
 				<Route path={process.env.PUBLIC_URL+"/userhome"} element={<UserLoginHome/>}/>
 				<Route path={process.env.PUBLIC_URL+"/professionalhome"} element={<ProfessionalLoginHome/>}/>
 				<Route path={process.env.PUBLIC_URL+"/profile-edit"} element={<ProfessionalAccountEdit/>}/>

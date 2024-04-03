@@ -9,19 +9,21 @@ const PropOne = ({projectStyle, portfolio}) => {
 		<>
 			<div className={`project-grid ${projectStyle}`}>
 				<div className="thumbnail">
-				<Link to={process.env.PUBLIC_URL + `/project-details/${slugify(portfolio.title)}`}>
+				<Link to={process.env.PUBLIC_URL + `/${slugify(portfolio.title)}`}>
 					<img src={process.env.PUBLIC_URL + portfolio.image} alt="icon" />
 				</Link>
 				</div>
 				<div className="content">
 				<h4 className="title"> 
-					<Link to={process.env.PUBLIC_URL + `/project-details/${slugify(portfolio.title)}`}>{portfolio.title}</Link>
+					<Link to={process.env.PUBLIC_URL + `/${slugify(portfolio.title)}`}>{portfolio.title}</Link>
 				</h4>
 				<span className="subtitle">
 					{portfolio.category.map((cat, i) => (
 						<span key={i}>{cat}</span>
 					))}
 				</span>
+                <p>{portfolio.excerpt}</p>
+
 				</div>
 			</div>
 		</>
