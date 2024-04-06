@@ -30,21 +30,5 @@
         "category": ["Sophisticated, Urban, Minimalist"],
         "excerpt": "An entertainment complex featuring theaters, restaurants, and nightlife attractions in the heart of the city.",
         "body":["An entertainment complex featuring theaters, restaurants, and nightlife attractions in the heart of the city."]
-    },
-    {
-        "id": 25,
-        "image": "/images/project/project-17.png",
-        "title": "Element Architects",
-        "category": ["Sophisticated, Urban, Minimalist"],
-        "excerpt": "A cozy coffee shop to improve functionality and create a welcoming atmosphere.",
-        "body":["A cozy coffee shop to improve functionality and create a welcoming atmosphere."]
-    },
-    {
-        "id": 26,
-        "image": "/images/project/project-18.png",
-        "title": "Spectrum Architects",
-        "category": ["Serenity, Coastal, Tranquil"],
-        "excerpt": "Renovating a pet shelter to improve animal welfare and create a more welcoming environment for pets",
-        "body":["Renovating a pet shelter to improve animal welfare and create a more welcoming environment for pets"]
     }
 ]

@@ -10,7 +10,7 @@ const AboutFour = () => {
                 <div className="row">
                     <div className="col-xl-4 col-lg-3">
                         <div className="case-study-featured-thumb text-start">
-                            <img src={process.env.PUBLIC_URL + "/images/others/case-study-4.png"} alt="travel" style={{ borderRadius: '30px' }} />
+                            <img src={process.env.PUBLIC_URL + "/images/others/aboutbanner.png"} alt="travel" style={{ borderRadius: '30px' }} />
                         </div>
                     </div>
 
@@ -24,8 +24,8 @@ const AboutFour = () => {
                                 <Link to="#" className="axil-btn btn-fill-primary btn-large">Read More</Link>
                             </div>
                             <div className="case-study-counterup">
-                                <div className="single-counterup">
-                                    <TrackVisibility once>
+                                {/* <div className="single-counterup">
+                                    {/* <TrackVisibility once>
                                         {({isVisible}) => (
                                             <div className="counter-item">
                                                 {isVisible && (
@@ -40,9 +40,9 @@ const AboutFour = () => {
                                                 )}
                                             </div>
                                         )}
-                                    </TrackVisibility>
-                                </div>
-                                <div className="single-counterup">
+                                    </TrackVisibility>s
+                                </div> */}
+                                {/* <div className="single-counterup">
                                     <TrackVisibility once>
                                         {({isVisible}) => (
                                             <div className="counter-item">
@@ -59,7 +59,7 @@ const AboutFour = () => {
                                             </div>
                                         )}
                                     </TrackVisibility>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>

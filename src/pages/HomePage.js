@@ -6,7 +6,7 @@ import AboutHomePage from '../component/about/AboutHomePage.js';
 import BannerHome from '../component/banner/BannerHome';
 
 import ProjectHome from '../component/project/ProjectHome';
-import ServiceOne from './ServiceOne';
+import ServiceHomePage from './ServiceHomePage.js';
 
 import ColorSwitcher from '../elements/switcher/ColorSwitcher';
 
@@ -22,7 +22,7 @@ const HomePage = () => {
             <Header />
             <BannerHome />
             <AboutHomePage />
-                    <ServiceOne/>
+                    <ServiceHomePage/>
             {/* <div className="section section-padding-2 bg-color-dark">
                 <div className="container">
                     <SectionTitle 
