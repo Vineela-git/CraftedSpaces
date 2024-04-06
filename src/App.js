@@ -16,6 +16,7 @@ import PersonalPortfolio from './pages/PersonalPortfolio';
 import UserLoginHome from './pages/UserLoginHome';
 import ProfessionalLoginHome from './pages/ProfessionalLoginHome';
 import ProfessionalAccountEdit from './pages/ProfessionalAccountEdit';
+import SearchResult from './common/header/SearchResult';
 
 
 import './assets/scss/app.scss';
@@ -37,6 +38,8 @@ const App = () => {
 				<Route path={process.env.PUBLIC_URL+"/userhome"} element={<UserLoginHome/>}/>
 				<Route path={process.env.PUBLIC_URL+"/professionalhome"} element={<ProfessionalLoginHome/>}/>
 				<Route path={process.env.PUBLIC_URL+"/profile-edit"} element={<ProfessionalAccountEdit/>}/>
+				<Route path={process.env.PUBLIC_URL +"/api/search"} element={<SearchResult />} />
+
 
 			</Routes>
 		</ScrollToTop>

@@ -1,18 +1,35 @@
-import React from 'react';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
+import React, { useState, useEffect } from 'react';
+
 import { Link } from 'react-router-dom';
 
+import { useNavigate } from 'react-router-dom';
 
 
 const BannerOne = () => {
+
+    const [searchQuery, setSearchQuery] = useState('');
+     const navigate = useNavigate();
+
+  const handleInputChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+    if (searchQuery.trim()) {
+      navigate(`/search?query=${encodeURIComponent(searchQuery)}`);
+    } else {
+      navigate('/search'); // Redirect to search page without query if search query is empty
+    }
+  };
+
     return (
         <div className="banner banner-style-1">
             <div className="container">
                 <div className="row align-items-end align-items-xl-start">
                     <div className="col-lg-6">
                         <div className="banner-content">
-                            <AnimationOnScroll animateIn="fadeInUp" duration={1} animateOnce={true} delay={100}>
-                                <div className="button-container axil-btn"> <h2>Explore Our Professionals</h2>
+                                <div className=" row button-container axil-btn"> <h3>Explore Our Professionals</h3>
                                 <Link to={process.env.PUBLIC_URL + "/builders"} className="axil-btn btn-large btn-fill-white"> Builders</Link>
 
                                 <Link to={process.env.PUBLIC_URL + "/architects"}className="axil-btn btn-large btn-fill-white">Architects</Link> 
@@ -21,30 +38,33 @@ const BannerOne = () => {
                         
                                 </div>
 
-                            </AnimationOnScroll>
+             
                         </div>
                     </div>
-                    <div className="col-lg-6">
-                        <div className="banner-thumbnail">
-                            <AnimationOnScroll animateIn="zoomIn" duration={1} delay={100} animateOnce={true}>
-                                <div className="large-thumb">
-                                    <img src={process.env.PUBLIC_URL + "/images/banner/window.png"} alt="Laptop" />
-                                </div>
-                            </AnimationOnScroll>
-                            <AnimationOnScroll animateIn="slideInRight" duration={1} delay={100} animateOnce={true}>
-                            <div className="large-thumb-2">
-                                <img src={process.env.PUBLIC_URL + "/images/banner/laptop-poses.png"} alt="Laptop" />
-                            </div>
-                            </AnimationOnScroll>
-                            <ul className="list-unstyled shape-group">
-                                <li className="shape shape-1">
-                                    <AnimationOnScroll animateIn="slideInLeft" duration={1} delay={100} animateOnce={true}>
-                                        <img src={process.env.PUBLIC_URL + "/images/banner/chat-group.png"} alt="chat" />
-                                    </AnimationOnScroll>
-                                </li> 
-                            </ul>
+
+                    {/* <div className="login_banner-search text-center">
+                            <input type="text"  
+                                   placeholder="Search Professionals" 
+                                   value={searchQuery}
+                                   onChange={handleInputChange}/>
+                            <button className="axil-btn  btn-small btn-fill-white"type="submit" style={{ marginBlock: 10 }}>Search</button>
+                        </div> */}
+
+                    {/* //import search bar here */}
+
+                    <div className="col-lg-6 col-xl-6">
+                        <div className="login_banner-search text-center">
+                            <input type="text"  placeholder="Search Professionals"value={searchQuery}
+                                   onChange={handleInputChange} />
+                            <button className="axil-btn  btn-small btn-fill-white"
+                                    type="submit" 
+                                    style={{ marginBlock: 10 }}
+                                    value={searchQuery}
+                                    onSubmit={handleSubmit}>Search</button>
                         </div>
                     </div>
+                   
+                
                 </div>
             </div>
             <ul className="list-unstyled shape-group-21">

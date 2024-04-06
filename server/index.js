@@ -5,12 +5,15 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const userdetailsModel = require("./models/userdetails.js");
 const professionalModel = require("./models/professionalDetails.js");
+const profSearch = require("./routes/professionalsSearch.js");
 port = 3001;
 const salt = 10;
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use("/api",profSearch)
 mongoose.connect("mongodb://127.0.0.1:27017/userdetails");
+
 
 app.post("/signup", async (req, res) => {
   // Store a user/professional
@@ -107,6 +110,22 @@ app.post("/login", async (req, res) => {
 app.get("/", function (req, res) {
   res.render("index", {});
 });
+// let firstname = "";
+// app.get("/search", async(req, res)=>{
+
+//    const {firstname} = req.query;
+
+//   try{
+//     const professional = await professionalModel.findOne( {firstname });
+//     res.json(professional);
+  
+
+//   }catch(error){
+//     console.error(error);
+//     res.status(500).json({ error: true, message: 'Server Error' });
+
+//   }
+// });
 // vvv On port 3001!
 app.listen(port, () => {
   console.log(`Server is running on ${port}`);

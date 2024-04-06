@@ -142,8 +142,17 @@ input {
 .formsignup {
     display: inline-block; /* Ensures forms display inline */
     margin-right: 10px; /* Adjust spacing between forms */
+    border: var(--border-lighter);
+    border-radius: 16px;
   }
   
 
- 
+ .select-input{
+    border: var(--border-lighter);
+    border-radius: 16px;
+    background-color: transparent;
+    color: var(--color-text-dark);
+    padding: 15px 20px;
+    width: 100%;
+ }
 
