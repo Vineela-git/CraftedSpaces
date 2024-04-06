@@ -6,7 +6,7 @@ import AboutHomePage from '../component/about/AboutHomePage.js';
 import BannerHome from '../component/banner/BannerHome';
 
 import ProjectHome from '../component/project/ProjectHome';
-import ServiceHomePage from './ServiceHomePage';
+import ServiceHomePage from './ServiceHomePage.js';
 
 import ColorSwitcher from '../elements/switcher/ColorSwitcher';
 
