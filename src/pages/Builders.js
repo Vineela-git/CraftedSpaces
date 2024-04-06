@@ -5,7 +5,9 @@ import SEO from '../common/SEO';
 import BannerBuilders from '../component/banner/BannerBuilders';
 import CtaLayoutBuilders from '../component/cta/CtaLayoutBuilders';
 import ColorSwitcher from '../elements/switcher/ColorSwitcher';
-import ProjectGridTwo from './ProjectGridTwo';
+import ServiceBuilders from '../pages/ServiceBuilders';
+import ProjectBuilders from '../component/project/ProjectBuilders';
+import HeaderBuilder from '../common/header/HeaderBuilder';
 
 const Builders = () => {
 
@@ -14,9 +16,10 @@ const Builders = () => {
         <SEO title="Buidlers"/>
         <ColorSwitcher />
         <main className="main-wrapper">
-        <Header/>
+        <HeaderBuilder/>
         <BannerBuilders/>
-        <ProjectGridTwo/>
+        <ServiceBuilders/>
+        <ProjectBuilders/>
         <CtaLayoutBuilders/>
         <Footer />
         </main>

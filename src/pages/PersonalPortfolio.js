@@ -8,7 +8,8 @@ import ColorSwitcher from '../elements/switcher/ColorSwitcher';
 
 import FooterTwo from '../common/footer/FooterTwo';
 import FormThree from '../component/contact/FormThree';
-import ProjectTwo from '../component/project/ProjectTwo';
+import ProjectPortfolio from '../component/project/ProjectPortfolio';
+
 
 const PersonalPortfolio = () => {
 
@@ -22,7 +23,7 @@ const PersonalPortfolio = () => {
             
             <CompanyDetails/>
 
-            <ProjectTwo/>
+            <ProjectPortfolio/>
 
         
             <div className="section-padding bg-color-dark">
