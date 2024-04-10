@@ -7,6 +7,7 @@ import BannerArchitects from '../component/banner/BannerArchitects';
 import ProjectArchitects from '../component/project/ProjectArchitects';
 
 import ColorSwitcher from '../elements/switcher/ColorSwitcher';
+import ServiceArchitects from '../pages/ServiceArchitects';
 
 
 const Architects = () => {
@@ -18,6 +19,7 @@ const Architects = () => {
             <main className="main-wrapper">
             <HeaderArchitect />
             <BannerArchitects />
+            <ServiceArchitects/>
                     
         
     
