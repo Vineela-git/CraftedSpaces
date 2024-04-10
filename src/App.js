@@ -18,6 +18,10 @@ import ProfessionalLoginHome from './pages/ProfessionalLoginHome';
 import ProfessionalAccountEdit from './pages/ProfessionalAccountEdit';
 import CompanyDetails from './pages/CompanyDetails';
 
+import SearchResult from './common/header/SearchResult';
+
+
+
 import './assets/scss/app.scss';
 import Arcadia from './pages/ArchitectProjects/Arcadia';
 import Horizon from './pages/ArchitectProjects/Horizon';
@@ -66,6 +70,8 @@ const App = () => {
 				<Route path={process.env.PUBLIC_URL+"/userhome"} element={<UserLoginHome/>}/>
 				<Route path={process.env.PUBLIC_URL+"/professionalhome"} element={<ProfessionalLoginHome/>}/>
 				<Route path={process.env.PUBLIC_URL+"/profile-edit"} element={<ProfessionalAccountEdit/>}/>
+				<Route path={process.env.PUBLIC_URL +"/api/search"} element={<SearchResult />} />
+
 
 			</Routes>
 		</ScrollToTop>
