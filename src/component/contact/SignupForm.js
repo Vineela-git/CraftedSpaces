@@ -50,19 +50,29 @@ function SignupForms() {
 
 function UserSignupForm() {
   const [values, setValues] = useState({
-    firstname: "",
-    lastname: "",
+    fullname: "",
     email: "",
     phone: "",
     address: "",
     city: "",
     state: "",
     zipcode: "",
-
     password: "",
+    confirmpassword:""
   });
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
+  const [passwordMatchError, setPasswordMatchError] = useState("");
+  const [zipCodeError, setZipCodeError] = useState("");
+
+  // Function to validate zip code
+const validateZipCode = (zipCode) => {
+  // Regular expression to match US zip code format
+  const zipCodeRegex = /^\d{5}(?:-\d{4})?$/;
+  return zipCodeRegex.test(zipCode);
+};
+
+
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -70,10 +80,38 @@ function UserSignupForm() {
       ...values,
       [e.target.name]: e.target.value,
     });
+     // Check if password and confirmPassword match
+  if (e.target.name === "password" || e.target.name === "confirmpassword") {
+    if (e.target.name === "password") {
+      // Clear the password match error when the user changes the password field
+      setPasswordMatchError("");
+    }
+    if (values.password !== values.confirmpassword) {
+      setPasswordMatchError("Passwords do not match");
+    } else {
+      setPasswordMatchError("");
+    }
+  }
+
+    // Check if zip code is valid
+    if (e.target.name === "zipcode") {
+      if (!validateZipCode(e.target.value)) {
+        setZipCodeError("Please enter a valid zip code");
+      } else {
+        setZipCodeError("");
+      }
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Check if passwords match before submitting
+    if (values.password !== values.confirmpassword) {
+      setPasswordMatchError("Passwords do not match");
+      return; // Exit the function early
+    }
+
     axios
       .post("http://localhost:3001/signup", values)
       .then((result) => {
@@ -93,8 +131,7 @@ function UserSignupForm() {
     <div>
       <form onSubmit={handleSubmit} className="signupform-control">
       <div className="signupform-row">
-        <div className="signupform-field">
-        
+        <div className="signupform-field">       
         <input
           type="text"
           name="fullname"
@@ -127,15 +164,6 @@ function UserSignupForm() {
         />
         </div>
 
-        <div className="signupform-field">
-        <input
-          type="text"
-          name="location"
-          value={values.location}
-          placeholder="Location"
-          onChange={handleChange}
-        />
-        </div>
 
         <div className="signupform-field">
         <input
@@ -146,16 +174,55 @@ function UserSignupForm() {
           onChange={handleChange}
         />
         </div>
-
         <div className="signupform-field">
         <input
           type="text"
-          name="password"
-          value={values.password}
-          placeholder="Password"
+          name="city"
+          value={values.city}
+          placeholder="City"
           onChange={handleChange}
         />
         </div>
+        <div className="signupform-field">
+        <input
+          type="text"
+          name="state"
+          value={values.state}
+          placeholder="State"
+          onChange={handleChange}
+        />
+        </div>
+        <div className="signupform-field">
+        <input
+          type="text"
+          name="zipcode"
+          value={values.zipcode}
+          placeholder="Zipcode"
+          onChange={handleChange}
+        />
+        </div>
+        {zipCodeError && <div className="error">{zipCodeError}</div>}
+
+        <div className="signupform-field">
+        <input
+          type="password"
+          name="password"
+          value={values.password}
+          placeholder="......"
+          onChange={handleChange}
+        />
+        </div>
+        <div className="signupform-field">
+        <input
+          type="password"
+          name="confirmpassword"
+          value={values.confirmpassword}
+          placeholder="......"
+          onChange={handleChange}
+        />
+        </div>
+        {passwordMatchError && <div className="error">{passwordMatchError}</div>}
+
         </div>
         <div className="signupform-field signupbutton-container">
         <button
@@ -180,6 +247,7 @@ function ProfessionalSignupForm() {
     firstname: "",
     lastname: "",
     email: "",
+    professionaltype:"",
     officephone: "",
     personalphone: "",
     address: "",
@@ -189,8 +257,20 @@ function ProfessionalSignupForm() {
     yearsofexperience: "",
     licensenumber: "",
     password: "",
+    confirmpassword:""
   });
   const [errorMessage, setErrorMessage] = useState("");
+  const [passwordMatchError, setPasswordMatchError] = useState("");
+  const [zipCodeError, setZipCodeError] = useState("");
+
+  // Function to validate zip code
+const validateZipCode = (zipCode) => {
+  // Regular expression to match US zip code format
+  const zipCodeRegex = /^\d{5}(?:-\d{4})?$/;
+  return zipCodeRegex.test(zipCode);
+};
+
+
 const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -199,10 +279,36 @@ const navigate = useNavigate();
       ...values,
       [e.target.name]: e.target.value,
     });
+
+  // Check if password and confirmPassword match
+  
+    if (e.target.name === "confirmpassword" && values.password !== e.target.value) {
+      setPasswordMatchError("Passwords do not match. Re enter");
+    }else{
+      setPasswordMatchError("");
+    }
+  
+  // Check if zip code is valid
+  if (e.target.name === "zipcode") {
+    if (!validateZipCode(e.target.value)) {
+      setZipCodeError("Please enter a valid zip code");
+    } else {
+      setZipCodeError("");
+    }
+  }
   };
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Check if passwords match before submitting
+  if (values.password !== values.confirmpassword) {
+    setPasswordMatchError("Passwords do not match,please set password again");
+    return; // Exit the function early
+  }
+
     axios
       .post("http://localhost:3001/signup", values)
       .then((result) => {
@@ -269,14 +375,30 @@ const navigate = useNavigate();
           required
         />
         </div>
+        <div className="signupform-field input-signupform">
+            <label>Professional Type</label>
+            <select
+              className="select-input"
+              name="professionaltype"
+              value={values.professionaltype}
+              onChange={handleChange}
+              required 
+              >
+            <option value="">Select Professional Type</option>
+            <option value="builders">Builders</option>
+            <option value="architects">Architects</option>
+            <option value="interiordesigners">Interior Designers</option>
+  </select>
+</div>
         <div className="signupform-field">
         <label>Office Phone</label>
         <input
           type="tel"
           name="officephone"
-          value={values.officenumber}
+          value={values.officephone}
           placeholder="Office Number"
           onChange={handleChange}
+          pattern="[0-9]*" // Allow only numeric characters
           required
         />
         </div>
@@ -285,8 +407,9 @@ const navigate = useNavigate();
         <input
           type="tel"
           name="personalphone"
-          value={values.personalnumber}
+          value={values.personalphone}
           placeholder="Personal Number"
+          pattern="[0-9]*" // Allow only numeric characters
           onChange={handleChange}
         />
         </div>
@@ -362,13 +485,28 @@ const navigate = useNavigate();
           type="password"
           name="password"
           value={values.password}
-          placeholder=""
+          placeholder="......"
+          onChange={handleChange}
+          required
+        />
+        </div>
+        <div className="signupform-field">
+        <label>Confirm Your Password</label>
+        <input
+          type="password"
+          name="confirmpassword"
+          value={values.confirmpassword}
+          placeholder="......"
           onChange={handleChange}
           required
         />
         </div>
        
         </div>
+        {passwordMatchError && <div className="error">{passwordMatchError}</div>}
+
+        {zipCodeError && <div className="error">{zipCodeError}</div>}
+
         <div className="signupform-field signupbutton-container">
         <button
           type="submit"
@@ -376,6 +514,7 @@ const navigate = useNavigate();
           style={{ marginBlock: 10 }}>Sign Up
         </button>
         </div>
+        {errorMessage && <div className="error"> {errorMessage} </div>}
       </form>
     </div>
   );

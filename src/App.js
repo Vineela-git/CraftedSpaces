@@ -2,8 +2,6 @@ import React from 'react';
 import {BrowserRouter as Router, Routes, Route, BrowserRouter} from 'react-router-dom';
 import ScrollToTop from './component/scrollToTop/ScrollToTop';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 import HomePage from './pages/HomePage';
 import LoginSignup from './pages/SignupPage';
 import Builders from './pages/Builders';

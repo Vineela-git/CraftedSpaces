@@ -4,6 +4,7 @@ const professionalSchema = new mongoose.Schema({
   firstname: String,
   lastname: String,
   email: String,
+  professionaltype:String,
   officephone: String,
   personalphone: String,
   address: String,
