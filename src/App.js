@@ -18,8 +18,6 @@ import CompanyDetails from './pages/CompanyDetails';
 
 import SearchResult from './common/header/SearchResult';
 
-
-
 import './assets/scss/app.scss';
 import Arcadia from './pages/ArchitectProjects/Arcadia';
 import Horizon from './pages/ArchitectProjects/Horizon';
