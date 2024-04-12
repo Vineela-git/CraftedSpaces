@@ -17,16 +17,23 @@ const FormThree = () => {
 
     const [ result, showresult ] = useState(false);
     const [user, setUser] = useState(null);
+    const[isEditing,setEditing] = useState(false);
    
     const [formData, setFormData] = useState({
-      firstname: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      address:'',
-      city:'',
-      state:'',
-      zipcode:''
+      companyname: "",
+      firstname: "",
+      lastname: "",
+      email: "",
+      professionaltype:"",
+      officephone: "",
+      personalphone: "",
+      address: "",
+      city: "",
+      state: "",
+      zipcode: "",
+      yearsofexperience: "",
+      licensenumber: "",
+      password: "",
     });
 
 // We use the useEffect hook to update the form data (formData) with the user's information as placeholders 
@@ -49,18 +56,7 @@ const FormThree = () => {
     }
   }, [user]);
 
-    const sendEmail = (e) => {
-        e.preventDefault();
-    
-        emailjs.sendForm('service_yj5dgzp', 'template_hfduayo', form.current, 'WLENsTkBytC0yvItS')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
-          form.current.reset();
-          showresult(true);
-      };
+
 
         setTimeout(() => {
             showresult(false);
@@ -79,14 +75,27 @@ const FormThree = () => {
     return (
 
          
-        <form ref={form} onSubmit={sendEmail} className="axil-contact-form">
+        <form ref={form}  className="axil-contact-form">
         <div className="container">
           <SectionTitle title="Account Settings" description="" textAlignment="heading-left" textColor="" />
         </div>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-9">
+              
               <div className="row mb-3">
+
+              <div className="col-md-6">
+                  <label htmlFor="first-name">Company Name</label>
+                  <input type="text" 
+                         className="form-control" 
+                         id="companyname" 
+                         name="companyname"
+                        value={formData.companyname}
+                        onChange={handleChange} 
+                        
+                        />
+                </div>
                 <div className="col-md-6">
                   <label htmlFor="first-name">First Name</label>
                   <input type="text" 
@@ -96,7 +105,7 @@ const FormThree = () => {
                         value={formData.firstname}
                         onChange={handleChange} 
                         
-                        required />
+                         />
                 </div>
                 <div className="col-md-6">
                   <label htmlFor="last-name">Last Name</label>
@@ -106,7 +115,7 @@ const FormThree = () => {
                          name="lastname" 
                          value={formData.lastname}
                           onChange={handleChange}
-                          required />
+                           />
                 </div> 
               </div>
 
@@ -121,17 +130,17 @@ const FormThree = () => {
                          value={formData.email}
                          onChange={handleChange}
                          
-                         required />
+                          />
                 </div>
                 <div className="col-md-6">
-                  <label htmlFor="phone">Phone Number</label>
+                  <label htmlFor="phone">Office Phone Number</label>
                   <input type="phone" 
                          className="form-control" 
                          id="phone" 
-                         name="phone" 
-                         value={formData.phone}
+                         name="officephone" 
+                         value={formData.officephone}
                          onChange={handleChange}
-                          required />
+                           />
                 </div>
               </div>
 
@@ -155,7 +164,7 @@ const FormThree = () => {
                          value={formData.city}
                          onChange={handleChange}
                          
-                         required />
+                          />
                 </div>        
               </div>
 
@@ -168,7 +177,7 @@ const FormThree = () => {
                          name="state" 
                          value={formData.state}
                          onChange={handleChange}
-                         required />
+                          />
                 </div> 
                 <div className="col-md-6">
                   <label htmlFor="pincode">Zipcode/Pincode</label>
@@ -179,8 +188,30 @@ const FormThree = () => {
                          value={formData.zipcode}
                          onChange={handleChange}
                          
-                         required />
-                </div>        
+                          />
+                </div>  
+                <div className="col-md-6">
+                  <label htmlFor="pincode">Years of Experience</label>
+                  <input type="text" 
+                         className="form-control" 
+                         id="yearsofexperience" 
+                         name="yearsofexperience" 
+                         value={formData.yearsofexperience}
+                         onChange={handleChange}
+                         
+                          />
+                </div> 
+                <div className="col-md-6">
+                  <label htmlFor="pincode">License Number</label>
+                  <input type="text" 
+                         className="form-control" 
+                         id="licensenumber" 
+                         name="licensenumber" 
+                         value={formData.licensenumber}
+                         onChange={handleChange}
+                         
+                          />
+                </div>       
               </div>
 
               <div className="row mb-3">
@@ -215,7 +246,3 @@ const FormThree = () => {
 
 export default FormThree;
 
-
-
-// The FormThree component now accepts a user prop, which contains the user's information.
-// Input fields are now controlled components, with their value attributes set to the corresponding values from formData.

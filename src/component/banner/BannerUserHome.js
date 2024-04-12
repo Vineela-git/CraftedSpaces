@@ -3,7 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useNavigate } from 'react-router-dom';
+const axios = require("axios");
 
+const base_url="http://localhost:3000/api/search";
 
 const BannerOne = () => {
 
@@ -14,14 +16,24 @@ const BannerOne = () => {
     setSearchQuery(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent the default form submission behavior
     if (searchQuery.trim()) {
-      navigate(`/search?query=${encodeURIComponent(searchQuery)}`);
+        
+        try {
+            const response = await axios.get(`http://localhost:3000/api/search/?firstname=${encodeURIComponent(searchQuery)}`);
+            if (response.ok) {
+                navigate(`/api/search?firstname=${encodeURIComponent(searchQuery)}`);
+            } else {
+                console.log('Failed to fetch search results');
+            }
+        } catch (error) {
+            console.error('Error fetching search results:', error);
+        }
     } else {
-      navigate('/search'); // Redirect to search page without query if search query is empty
+        navigate('/search');
     }
-  };
+};
 
     return (
         <div className="banner banner-style-1">
@@ -60,7 +72,7 @@ const BannerOne = () => {
                                     type="submit" 
                                     style={{ marginBlock: 10 }}
                                     value={searchQuery}
-                                    onSubmit={handleSubmit}>Search</button>
+                                    onClick={handleSubmit}>Search</button>
                         </div>
                     </div>
                    

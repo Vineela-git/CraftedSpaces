@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const professionalSchema = new mongoose.Schema({
+  
   companyname: String,
   firstname: String,
   lastname: String,

@@ -21,7 +21,7 @@ const filters = [
 
 const AllData = ProjectData;
 
-console.log(AllData);
+
 
 const ProjectOne = ({parentClass, colSize, itemShow, columnGap}) => {
 
