@@ -1,6 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { jwtDecode } from "jwt-decode";
+import { Route, Redirect } from "react-router-dom";
 
 const FormOne = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -17,27 +19,59 @@ const FormOne = () => {
 
   //prevents the default form submission behavior, which is a page reload
   //Once you've prevented the default behavior, you can execute custom logic
-
+  useEffect(() => {
+    try {
+      const token = localStorage.getItem("token");
+      if (token) {
+        // If token exists, decode it to check if user is logged in
+        const decoded = jwtDecode(token);
+        if (decoded.user) {
+          setUser(decoded.user);
+          setLoggedIn(true);
+          navigate("/userhome");
+        } else if (decoded.professional) {
+          // You can handle professional user case here
+          setLoggedIn(true);
+          navigate("/professionalhome");
+        }
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }, []); // Empty dependency array to run only once when component mounts
   const handleLogin = async (e) => {
     e.preventDefault();
-
-    await axios
-      .post("http://localhost:3001/login", { email, password })
-      .then((result) => {
-        console.log(result);
-        if (result.data === "usersuccess") {
+    try {
+      const response = await axios.post("http://localhost:3001/login", {
+        email,
+        password,
+      });
+      const { token } = response.data;
+      console.log(token);
+      localStorage.setItem("token", token);
+      if (token) {
+        const decoded = jwtDecode(token);
+        if (decoded.user) {
+          setUser(decoded.user);
+          setLoggedIn(true);
           navigate("/userhome");
-        } else if (result.data === "success") {
-          //Add Professional Edit page here
+        } else if (decoded.professional) {
+          setLoggedIn(true);
           navigate("/professionalhome");
-        } else if (result.data === "invalid") {
+        }
+      } else {
+        if (response.data === "invalid") {
+          console.log("Invalid password"); // Log invalid password error
           setErrorMessage("invalid password");
+        } else {
+          console.log("No records found"); // Log no records found error
+          setErrorMessage("No records found, Please sign up first!");
         }
-        else{
-            setErrorMessage("No records found, Please sign up first!")
-        }
-      })
-      .catch((err) => console.log(err));
+      }
+    } catch (err) {
+      console.log(err);
+      setErrorMessage("Error occurred during login");
+    }
   };
 
   setTimeout(() => {
@@ -87,7 +121,8 @@ const FormOne = () => {
           <button
             type="login"
             className="axil-btn btn-fill-primary btn-fluid btn-primary"
-            name="login-btn">
+            name="login-btn"
+          >
             Login
           </button>
         </div>

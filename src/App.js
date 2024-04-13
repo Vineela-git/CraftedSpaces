@@ -31,6 +31,7 @@ import Luxe from './pages/DesignerProjects/Luxe';
 import Artisan from './pages/DesignerProjects/Artisan';
 import UrbanNest from './pages/DesignerProjects/UrbanNest';
 import Evolve from './pages/DesignerProjects/Evolve';
+import Protected from './Protected';
 
 const App = () => {
   return (
@@ -45,8 +46,8 @@ const App = () => {
 				<Route path={process.env.PUBLIC_URL+"/architects"} element={<Architects/>}/>
 				<Route path={process.env.PUBLIC_URL +"/interior-designers"} element={<InteriorDesigner/>}/>
 				<Route path={process.env.PUBLIC_URL+"/contact-us"} element={<Contact/>}/>
-				<Route path={process.env.PUBLIC_URL+"/portfolio"} element={<PersonalPortfolio/>}/>
-				<Route path={process.env.PUBLIC_URL+"/company"} element={<CompanyDetails/>}/>
+				<Route path={process.env.PUBLIC_URL+"/portfolio"} element={<Protected><PersonalPortfolio/></Protected>}/>
+				<Route path={process.env.PUBLIC_URL+"/company"} element={<Protected><CompanyDetails/></Protected>}/>
 				<Route path={process.env.PUBLIC_URL+"/arcadia-architects"} element={<Arcadia/>}/>
 				<Route path={process.env.PUBLIC_URL+"/horizon-architects"} element={<Horizon/>}/>
 				<Route path={process.env.PUBLIC_URL+"/unity-architects"} element={<Unity/>}/>
@@ -63,11 +64,10 @@ const App = () => {
 				<Route path={process.env.PUBLIC_URL+"/urban-nest-design"} element={<UrbanNest/>}/>
 				<Route path={process.env.PUBLIC_URL+"/evolve-interior-design"} element={<Evolve/>}/>
 
-				<Route path={process.env.PUBLIC_URL+"/userhome"} element={<UserLoginHome/>}/>
-				<Route path={process.env.PUBLIC_URL+"/professionalhome"} element={<ProfessionalLoginHome/>}/>
-				<Route path={process.env.PUBLIC_URL+"/profile-edit"} element={<ProfessionalAccountEdit/>}/>
-				<Route path={process.env.PUBLIC_URL +"/api/search"} element={<SearchResult />} />
-
+				<Route path={process.env.PUBLIC_URL+"/userhome"} element={<Protected><UserLoginHome/></Protected>}/>
+				<Route path={process.env.PUBLIC_URL+"/professionalhome"} element={<Protected><ProfessionalLoginHome/></Protected>}/>
+				<Route path={process.env.PUBLIC_URL+"/profile-edit"} element={<Protected><ProfessionalAccountEdit/></Protected>}/>
+				<Route path={process.env.PUBLIC_URL +"/api/search"} element={<Protected><SearchResult /></Protected>} />
 
 			</Routes>
 		</ScrollToTop>

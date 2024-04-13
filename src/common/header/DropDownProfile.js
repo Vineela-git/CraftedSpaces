@@ -1,10 +1,19 @@
-import React from "react";
-import { Link } from 'react-router-dom';
+import React, {useState} from "react";
+import { Link, useNavigate } from 'react-router-dom';
 import { FaAngleDown } from "react-icons/fa";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const DropDownProfile = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate(); // Get the navigation function
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setLoggedIn(false);
+    setUser(null);
+    navigate("/login");
+  };
   return(
 
    
@@ -16,7 +25,7 @@ const DropDownProfile = () => {
                         <li><Link to={process.env.PUBLIC_URL + "#"}>Chat</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "#"}>Edit Profile</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "#"}>Settings</Link></li>
-                        <li><Link to={process.env.PUBLIC_URL + "#"}>Logout</Link></li>
+                        <li><Link to={process.env.PUBLIC_URL + "#"} onClickCapture={handleLogout}>Logout</Link></li>
                     </ul>
         </li>
        
