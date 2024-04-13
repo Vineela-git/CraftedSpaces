@@ -69,4 +69,23 @@
     &.btn-fluid {
         width: 100%;
     }
+
+    &.axil-btn.btn-large.btn-fill-white {
+        margin: 0 auto;
+        display: block;
+      }
+
+      &.axil-btn.btn-small.btn-fill-white {
+        margin: 0 auto;
+        // display: block;
+        padding: 8px 8px; /* Adjust the padding to make the button smaller */
+        font-size: 14px; /* Adjust the font-size to make the text smaller */
+      }
+      
+      &.section-heading.heading-light {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
 }

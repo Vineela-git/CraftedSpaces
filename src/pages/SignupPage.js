@@ -19,27 +19,15 @@ return(
         <Header/>
         <BannerLS/>
         <div className="container">
-        <SectionTitle                  
-                        title="Write something here for Signup"
-                        description="Some explanation to tell user about the  signup page"
-                        textAlignment=""
-                        textColor=""
-                    />
-
-<section className="section section-padding-equal bg-color-light">
-    
+        <section className="">    
             <div className="container">
-                <div className="row align-items-center">
-                    <div className="col-xl-5 col-lg-6 offset-xl-4">
-
-                    <div className="contact-form-box">
-                            <h3 className="title">Write Content for Two different signups for user and Professional</h3>
+                <div className="">
+                    <div className="">
+                    <div className="">
+                            {/* <h3 className="title">Your Journey Starts Here, Sign Up Today</h3> */}
                            <SignupForm />
                         </div>  
-                     
-
                     </div>
-
                 </div>
             </div>
             <ul className="shape-group-6 list-unstyled">

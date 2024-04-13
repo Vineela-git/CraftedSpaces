@@ -54,7 +54,7 @@ const FormTwo = () => {
             
         </div>
         <div className="form-group">
-            <button type="submit" className="axil-btn btn-fill-primary btn-fluid btn-primary" name="submit-btn">Get Pricing Now</button>
+            <button type="submit" className="axil-btn btn-fill-primary btn-fluid btn-primary" name="submit-btn">Submit</button>
         </div>
         <div className="form-group">
             {result ? <Result /> : null}

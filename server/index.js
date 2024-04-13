@@ -1,23 +1,30 @@
+require("dotenv").config();
 const express = require("express");
-const bodyParser = require("body-parser");
-const PORT = 5001;
-const locationRoutes = require('./routes/location-routes');
-// Creating App Object by executing express as a function.
-
+const cors = require("cors");
+const axios = require("axios");
+const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
+const jwt = require('jsonwebtoken');
+const { expressjwt: expressJwt } = require("express-jwt");
+const userdetailsModel = require("./models/userdetails.js");
+const professionalModel = require("./models/professionalDetails.js");
+const profSearch = require("./routes/professionalsSearch.js");
+const {login, register} = require("./Controllers/controller.js") ;
+port = 3001;
 const app = express();
+app.use(express.json());
+app.use(cors());
+app.use("/api",profSearch)
+mongoose.connect("mongodb://127.0.0.1:27017/userdetails");
+app.use('/secure', expressJwt({ secret: process.env.SECRET, algorithms: ['HS256'] }));
 
-// this is added here as a  middleware
-// The path indicates that express js will only forward the requests of this path to location routes middle.
-//api/location/anything will also forward
+app.post("/signup", register );
+app.post("/login", login);
 
-app.use('/api/location',locationRoutes);
-
-app.use((error,req,res,next) =>{
-
-    if('/message3'){
-        return res.status(404).json({message:"Not a valid message"});
-      }
+app.get("/", function (req, res) {
+  res.render("index", {});
 });
 
-
-app.listen(PORT);
+app.listen(port, () => {
+  console.log(`Server is running on ${port}`);
+});

@@ -33,9 +33,9 @@ const HeaderArchitect = () => {
                     <div className="container">
                         <div className="header-navbar">
                             <div className="header-logo">
-                                <Logo limage="/images/logo1.png"
-                                dimage="/images/logo1.png"
-                                simage="/images/logo1.png"
+                                <Logo limage="/images/logo-transparent-darktheme.png"
+                                dimage="/images/logo-transparent-darktheme.png"
+                                simage="/images/logo-transparent-darktheme.png"
                                 />
                             </div>
                             <div className="header-main-nav">

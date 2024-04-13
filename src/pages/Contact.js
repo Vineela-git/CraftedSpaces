@@ -27,7 +27,7 @@ const Contact = () => {
                     <div className="row">
                         <div className="col-xl-5 col-lg-6">
                             <div className="contact-form-box shadow-box mb--30">
-                                <h3 className="title">Get a free Abstrak quote now</h3>
+                                <h3 className="title">Leave your queries below for any assistance</h3>
                                 <FormTwo />
                             </div>
                         </div>

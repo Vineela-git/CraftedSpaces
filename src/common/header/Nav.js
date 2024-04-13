@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaAngleDown } from "react-icons/fa";
+import DropDownProfile from './DropDownProfile';
 
 
 const Nav = () => {
@@ -25,23 +26,13 @@ const Nav = () => {
                     </ul>
                 </li>
                
-                <li className="menu-item-has-children">
-                    <Link to='#'>Login/Signup<FaAngleDown/></Link>
-                    <ul className="axil-submenu">
-                        <li><Link to={process.env.PUBLIC_URL+"/login"}>Login</Link></li>
-                        <li><Link to={process.env.PUBLIC_URL+"/signup"}>Signup</Link></li>
-                        
-  
-                 </ul>
-    
-                </li>
+
+                <li><Link to={process.env.PUBLIC_URL + "/contact-us"}>Contact Us</Link></li>
 
                 <li className="menu-item-has-children">
-                    <Link to={process.env.PUBLIC_URL+"/search"}>Search</Link>
-                  
-                </li>
-                <li><Link to={process.env.PUBLIC_URL + "/contact-us"}>Contact</Link></li>
+                <Link to={process.env.PUBLIC_URL+"/signup"}>Signup</Link></li>
             </ul>
+           
         </nav>
     )
 }

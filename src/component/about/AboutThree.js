@@ -4,28 +4,28 @@ import SectionTitle from '../../elements/section-title/SectionTitle';
 const Datas = [
     {
         id: 1,
-        title: "Exceed clients’ and colleagues’ expectations",
-        para: "Ut id orci ultricies, gravida arcu ac, elementum eros. Curabitur tortor ipsum, imperdiet eget odio ac, faucibus ultricies nisl. Maecenas scelerisque dignissim elit."
+        title: "Expertise and Experience",
+        para: "Experience unmatched quality and craftsmanship with our seasoned team of construction experts"
     },
     {
         id: 2,
-        title: "Take ownership and question the status quo in a constructive manner",
-        para: "Nulla facilisi. Vestibulum vel urna eget magna condimentum faucibus. Sed arcu mi, semper sed suscipit vel, rhoncus vel justo."
+        title: "Personalized Service",
+        para: "Our personalized approach ensures every project receives the attention it deserves, tailored to your unique vision."
     },
     {
         id: 3,
-        title: "Be brave, curious and experiment – learn from all successes and failures",
-        para: "Quisque aliquet quis est in faucibus. Aenean eget lorem ac risus placerat convallis eget a eros. Suspendisse dignissim ultrices tellus, id placerat mauris lacinia a."
+        title: "Transparent Communication",
+        para: "Transparent communication and dedication to client satisfaction are the cornerstones of our service."
     },
     {
         id: 4,
-        title: "Act in a way that makes all of us proud",
-        para: "Proin dignissim facilisis tortor a mattis. Morbi non maximus nunc, ut mattis tellus. In hac habitasse platea dictumst. Mauris viverra enim tellus, vel ultrices dolor aliquam non."
+        title: "Innovative Solutions",
+        para: "Choose innovation and sustainability with our forward-thinking construction solutions."
     },
     {
         id: 5,
-        title: "Build an inclusive, transparent and socially responsible culture",
-        para: "Maecenas eros sapien, egestas at elit nec, eleifend sagittis orci."
+        title: "Quality Workmanship",
+        para: "Our skilled craftsmen and attention to detail ensure that each aspect of your construction project is executed to the highest standards"
     }
 ]
 
@@ -37,9 +37,9 @@ const AboutThree = () => {
         <div className="section section-padding bg-color-dark pb--80 pb_lg--40 pb_md--20">
             <div className="container">
                 <SectionTitle 
-                    subtitle="Our Valus"
+                    subtitle="Crafting Success"
                     title="Why should you work with us?"
-                    description="Nulla facilisi. Nullam in magna id dolor blandit rutrum eget vulputate augue sed eu leo eget risus imperdiet."
+                    description="Discover the Difference: Elevate Your Construction Experience with Us"
                     textAlignment="heading-left heading-light-left mb--100"
                     textColor=""
                 />

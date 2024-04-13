@@ -34,14 +34,14 @@ const HeaderTwo = () => {
 
     return (
         <>
-            <header className="header axil-header header-style-2">
+            <header className="header axil-header header-style-4">
                 <div className={`axil-mainmenu ${sticky ? "axil-sticky" : ""}`}>
                     <div className="container-fluid">
                         <div className="header-navbar">
                             <div className="header-logo">
-                                <Logo limage="/images/logo1.png"
-                                dimage="/images/logo1.png"
-                                simage="/images/logo1.png"
+                                <Logo limage="/images/logo-transparent-darktheme.png"
+                                dimage="/images/logo-transparent.png"
+                                simage="/images/logo-transparent.png"
                                 />
                             </div>
                             <div className="header-main-nav">

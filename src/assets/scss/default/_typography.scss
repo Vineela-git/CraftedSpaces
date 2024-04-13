@@ -161,3 +161,15 @@ p {
     font-size: var(--font-body-4);
     line-height: var(--line-height-b3);
 }
+
+.special-heading {
+    font-family:  Georgia, 'Times New Roman', Times, serif; 
+    font-style: italic; 
+   
+}
+.error-message{
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: red;
+    margin-top: 0.2rem;
+  }

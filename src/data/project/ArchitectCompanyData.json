@@ -1,0 +1,34 @@
+[
+    {
+        "id": 21,
+        "image": "/images/project/project-13.png",
+        "title": "UrbanScape Architects",
+        "category": ["Serenity, Coastal, Tranquil"],
+        "excerpt": "A sustainable single-family home.",
+        "body":["A sustainable single-family home."]
+    },
+    {
+        "id": 22,
+        "image": "/images/project/project-14.png",
+        "title": "Horizon Architects",
+        "category": ["Sophisticated, Urban, Minimalist"],
+        "excerpt": "A revitalization project transforming an outdated mall into a modern retail destination.",
+        "body":["A revitalization project transforming an outdated mall into a modern retail destination."]
+    },
+    {
+        "id": 23,
+        "image": "/images/project/project-15.png",
+        "title": "Arcadia Architects",
+        "category": ["Serenity, Coastal, Tranquil"],
+        "excerpt": "A modern office tower offering innovative workspace solutions and panoramic city views.",
+        "body":["A modern office tower offering innovative workspace solutions and panoramic city views."]
+    },
+    {
+        "id": 24,
+        "image": "/images/project/project-16.png",
+        "title": "Unity Architects",
+        "category": ["Sophisticated, Urban, Minimalist"],
+        "excerpt": "An entertainment complex featuring theaters, restaurants, and nightlife attractions in the heart of the city.",
+        "body":["An entertainment complex featuring theaters, restaurants, and nightlife attractions in the heart of the city."]
+    }
+]

@@ -97,33 +97,33 @@
     },
     {
         "id": 13,
-        "image": "/images/project/project-7.png",
-        "title": "Mark Design",
-        "category": ["ios", "Design"],
+        "image": "/images/project/project-villas.png",
+        "title": "Lotus Grove Villas",
+        "category": ["Villas"],
         "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
         "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
     },
     {
         "id": 14,
-        "image": "/images/project/project-8.png",
-        "title": "Abastrak Agency",
-        "category": ["ios", "Design"],
+        "image": "/images/project/project-villas.png",
+        "title": "Bollywood Boulevard",
+        "category": ["Bollywood Style"],
         "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
         "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
     },
     {
         "id": 15,
-        "image": "/images/project/project-9.png",
-        "title": "Archi- Online platform",
-        "category": ["ios", "design"],
+        "image": "/images/project/project-villas.png",
+        "title": "Spice Garden Homes",
+        "category": ["Gated-community"],
         "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
         "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
     },
     {
         "id": 16,
-        "image": "/images/project/project-12.png",
-        "title": "Wordpress theme",
-        "category": ["ios", "design"],
+        "image": "/images/project/project-villas.png",
+        "title": "Himalaya Heights",
+        "category": ["High-Rise"],
         "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
         "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
     },
@@ -140,6 +140,231 @@
         "image": "/images/project/project-11.png",
         "title": "Illustration",
         "category": ["2020"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 19,
+        "image": "/images/project/project-13.png",
+        "title": "Green Acres Residence",
+        "category": "A sustainable single-family home.",
+        "excerpt": "A sustainable single-family home.",
+        "body":"A sustainable single-family home."
+    },
+
+    {
+        "id": 19,
+        "image": "/images/project/project-13.png",
+        "title": "Square Desgins",
+        "category": "A sustainable single-family home.",
+        "excerpt": "A sustainable single-family home.",
+        "body":"A sustainable single-family home."
+    },
+    {
+        "id": 20,
+        "image": "/images/project/project-14.png",
+        "title": "SkyView Mall Redevelopment",
+        "category": "A revitalization project transforming an outdated mall into a modern retail destination.",
+        "excerpt": "A revitalization project transforming an outdated mall into a modern retail destination.",
+        "body":"A revitalization project transforming an outdated mall into a modern retail destination."
+    },
+    {
+        "id": 21,
+        "image": "/images/project/project-15.png",
+        "title": "Cityscape Corporate Center",
+        "category": "A modern office tower offering innovative workspace solutions and panoramic city views.",
+        "excerpt": "A modern office tower offering innovative workspace solutions and panoramic city views.",
+        "body":"A modern office tower offering innovative workspace solutions and panoramic city views."
+    },
+    {
+        "id": 21,
+        "image": "/images/project/project-16.png",
+        "title": "CityCenter Entertainment District",
+        "category": "An entertainment complex featuring theaters, restaurants, and nightlife attractions in the heart of the city.",
+        "excerpt": "An entertainment complex featuring theaters, restaurants, and nightlife attractions in the heart of the city.",
+        "body":"An entertainment complex featuring theaters, restaurants, and nightlife attractions in the heart of the city."
+    },
+    {
+        "id": 22,
+        "image": "/images/project/project-17.png",
+        "title": "CosmoCoffee Shop",
+        "category": "A cozy coffee shop to improve functionality and create a welcoming atmosphere.",
+        "excerpt": "A cozy coffee shop to improve functionality and create a welcoming atmosphere.",
+        "body":"A cozy coffee shop to improve functionality and create a welcoming atmosphere."
+    },
+    {
+        "id": 23,
+        "image": "/images/project/project-18.png",
+        "title": "PlayfulPaws Pet Shelter Renovation",
+        "category": "Renovating a pet shelter to improve animal welfare and create a more welcoming environment for pets",
+        "excerpt": "Renovating a pet shelter to improve animal welfare and create a more welcoming environment for pets",
+        "body":"Renovating a pet shelter to improve animal welfare and create a more welcoming environment for pets"
+    },
+    {
+        "id": 40,
+        "image": "/images/project/project-8.png",
+        "title": "Abastrak Agency",
+        "category": ["ios", "Design"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 41,
+        "image": "/images/project/project-villas.png",
+        "title": "Saffron Heights",
+        "category": ["High-rise"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 42,
+        "image": "/images/project/project-villas.png",
+        "title": "Kerala Charm Villas",
+        "category": ["Villas"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 43,
+        "image": "/images/project/project-villas.png",
+        "title": "Backwater Bungalows",
+        "category": ["Bungalows"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 44,
+        "image": "/images/project/project-villas.png",
+        "title": "Lotus Pond Villas",
+        "category": ["Villas"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 45,
+        "image": "/images/project/project-villas.png",
+        "title": "Goa Grove Residences",
+        "category": ["Hotel"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 46,
+        "image": "/images/project/project-villas.png",
+        "title": "Mysore Marvel Homes",
+        "category": ["Apartments"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 47,
+        "image": "/images/project/project-villas.png",
+        "title": "Delhi Dream Estates",
+        "category": ["Apartments"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 48,
+        "image": "/images/project/project-villas.png",
+        "title": "Tulsi Terrace Homes",
+        "category": ["Apartments"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 50,
+        "image": "/images/project/project-villas.png",
+        "title": "Lakeview Villas",
+        "category": ["Villas"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 49,
+        "image": "/images/project/project-villas.png",
+        "title": "Sunrise Shores Homes",
+        "category": ["Apartments"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 52,
+        "image": "/images/project/project-villas.png",
+        "title": "Kashmir Valley Apartments",
+        "category": ["Apartments"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 51,
+        "image": "/images/project/project-villas.png",
+        "title": "Ganga Kinara Villas",
+        "category": ["Villas"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 60,
+        "image": "/images/project/project-villas.png",
+        "title": "Biryani Bistro",
+        "category": ["cafe"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 53,
+        "image": "/images/project/project-villas.png",
+        "title": "Hyderabadi Hideaway",
+        "category": ["Restaurant"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 54,
+        "image": "/images/project/project-bistro.png",
+        "title": "Banjara Bites Bistro",
+        "category": ["Bistro"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 55,
+        "image": "/images/project/project-villas.png",
+        "title": "Paradise Platter Palace",
+        "category": ["cafe"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 56,
+        "image": "/images/project/project-villas.png",
+        "title": "Deccan Dine-In",
+        "category": ["Dine-In"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 57,
+        "image": "/images/project/project-villas.png",
+        "title": "Secret Garden Villa",
+        "category": ["Villa"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 58,
+        "image": "/images/project/project-villas.png",
+        "title": "Twilight Terrace Homes",
+        "category": ["Homes"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 59,
+        "image": "/images/project/project-villas.png",
+        "title": "Humming Bird Cafe",
+        "category": ["cafe"],
         "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
         "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
     }

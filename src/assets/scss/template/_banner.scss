@@ -21,6 +21,16 @@
         padding: 150px 0 0;
     }
 
+    .banner-login{
+        .banner-login-content{
+            color: white;
+        }
+        .banner-login-size{
+            size: 50px;
+        }
+        
+    }
+
     .banner-content {
         @media #{$md-layout}{
             margin-bottom: 90px;
@@ -480,3 +490,8 @@
         }
     }
 }
+.login_banner-search {
+    text-align: center;
+    margin-top: 300px; /* Add this line to create space above */
+    margin-left: 10px;
+  }
