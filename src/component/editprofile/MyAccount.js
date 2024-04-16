@@ -4,7 +4,7 @@ import Alert from "react-bootstrap/Alert";
 import SectionTitle from "../../elements/section-title/SectionTitle";
 import axios from "axios";
 import Cookies from "js-cookie";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 const Result = () => {
   return (
     <Alert variant="success" className="success-msg">
@@ -13,9 +13,8 @@ const Result = () => {
   );
 };
 
-const FormThree = () => {
-  const form = useRef();
-const navigate = useNavigate();
+const FormTen = () => {
+    const navigate = useNavigate();
   const [result, showresult] = useState(false);
   const [user, setUser] = useState(null);
   const [isEditing, setEditing] = useState(false);
@@ -42,14 +41,13 @@ const navigate = useNavigate();
         const token = localStorage.getItem("token");
         if (token) {
           const { data } = await axios.get(
-            `http://localhost:3001/profile-edit`,
+            `http://localhost:3001/my-account`,
             {
               headers: { Authorization: `Bearer ${token}` },
             }
           );
-          sessionStorage.setItem("userData", JSON.stringify(data));
-          setFormData(data);
-                } else {
+          setUser(data);
+        } else {
           console.log("User ID not found in the cookie");
         }
       } catch (error) {
@@ -86,52 +84,20 @@ const navigate = useNavigate();
   }, 5000);
 
   // The handleChange function updates the form data state (formData) as the user types into the input fields.
-  const handleChange = (e) => {
-    e.preventDefault();
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
   const handleUpdate = async (e) => {
-    e.preventDefault(); // prevent the default form submission behavior
-  
     try {
       const token = localStorage.getItem("token");
-      if (token) {
-        const response = await axios.put(
-          "http://localhost:3001/profile-edit",
-          formData,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-              "Content-Type": "application/json",
-            },
-          }
-        );
-          // Update the user data in session storage
-      sessionStorage.setItem("userData", JSON.stringify(response.data));
-
-      // Refetch the user data from the server and update the local state
-      const { data } = await axios.get(`http://localhost:3001/profile-edit`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      setFormData(data);
-
-      showresult(true);
-
-      // Redirect the user to the "/my-account" route
-      navigate("/my-account");
-      } else {
-        console.log("No token found in localStorage");
+      if(token){
+navigate("/profile-edit");
       }
+     
     } catch (err) {
       console.log(err);
     }
   };
 
   return (
-    <form ref={form} className="axil-contact-form">
+    <form className="axil-contact-form">
       <div className="container">
         <SectionTitle
           title="Account Settings"
@@ -140,7 +106,6 @@ const navigate = useNavigate();
           textColor=""
         />
       </div>
-      
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-9">
@@ -153,7 +118,7 @@ const navigate = useNavigate();
                   id="companyname"
                   name="companyname"
                   value={formData.companyname}
-                  onChange={handleChange}
+                  disabled
                 />
               </div>
               <div className="col-md-6">
@@ -164,7 +129,7 @@ const navigate = useNavigate();
                   id="firstname"
                   name="firstname"
                   value={formData.firstname}
-                  onChange={handleChange}
+                  disabled
                 />
               </div>
               <div className="col-md-6">
@@ -175,7 +140,7 @@ const navigate = useNavigate();
                   id="lastname"
                   name="lastname"
                   value={formData.lastname}
-                  onChange={handleChange}
+                  disabled
                 />
               </div>
             </div>
@@ -189,7 +154,7 @@ const navigate = useNavigate();
                   id="email"
                   name="email"
                   value={formData.email}
-                  onChange={handleChange}
+                  disabled
                 />
               </div>
               <div className="col-md-6">
@@ -200,7 +165,7 @@ const navigate = useNavigate();
                   id="phone"
                   name="officephone"
                   value={formData.officephone}
-                  onChange={handleChange}
+                  disabled
                 />
               </div>
             </div>
@@ -214,7 +179,7 @@ const navigate = useNavigate();
                   name="address"
                   rows="6"
                   value={formData.address}
-                  onChange={handleChange}
+                  disabled
                 ></textarea>
               </div>
               <div className="col-md-6">
@@ -225,7 +190,7 @@ const navigate = useNavigate();
                   id="city"
                   name="city"
                   value={formData.city}
-                  onChange={handleChange}
+                  disabled
                 />
               </div>
             </div>
@@ -239,7 +204,7 @@ const navigate = useNavigate();
                   id="state"
                   name="state"
                   value={formData.state}
-                  onChange={handleChange}
+                  disabled
                 />
               </div>
               <div className="col-md-6">
@@ -250,7 +215,7 @@ const navigate = useNavigate();
                   id="zipcode"
                   name="zipcode"
                   value={formData.zipcode}
-                  onChange={handleChange}
+                  disabled
                 />
               </div>
               <div className="col-md-6">
@@ -261,7 +226,7 @@ const navigate = useNavigate();
                   id="yearsofexperience"
                   name="yearsofexperience"
                   value={formData.yearsofexperience}
-                  onChange={handleChange}
+                  disabled
                 />
               </div>
               <div className="col-md-6">
@@ -272,7 +237,7 @@ const navigate = useNavigate();
                   id="licensenumber"
                   name="licensenumber"
                   value={formData.licensenumber}
-                  onChange={handleChange}
+                  disabled
                 />
               </div>
             </div>
@@ -311,4 +276,4 @@ const navigate = useNavigate();
   );
 };
 
-export default FormThree;
+export default FormTen;

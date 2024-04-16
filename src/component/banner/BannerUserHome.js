@@ -3,27 +3,44 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useNavigate } from 'react-router-dom';
-const axios = require("axios");
-
+import axios from 'axios';
 const base_url="http://localhost:3000/api/search";
 
 const BannerOne = () => {
 
     const [searchQuery, setSearchQuery] = useState('');
+    const [searchOption, setSearchOption] = useState('companyname');
      const navigate = useNavigate();
 
   const handleInputChange = (e) => {
+    e.preventDefault();
     setSearchQuery(e.target.value);
   };
+  const handleSearchOptionChange = (e)=>{
+    e.preventDefault();
+    setSearchOption(e.target.value);
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent the default form submission behavior
-    if (searchQuery.trim()) {
+    if (searchQuery.trim().toLowerCase()) {
         
         try {
-            const response = await axios.get(`http://localhost:3000/api/search/?firstname=${encodeURIComponent(searchQuery)}`);
-            if (response.ok) {
-                navigate(`/api/search?firstname=${encodeURIComponent(searchQuery)}`);
+            // const response = await axios.get(`http://localhost:3001/api/search/?firstname=${encodeURIComponent(searchQuery)}`);
+            if (searchQuery) {
+                if(searchOption === "city"){
+                    navigate(`/api/search?city=${encodeURIComponent(searchQuery)}`);
+                }
+                else if(searchOption === "companyname"){
+                    navigate(`/api/search?companyname=${encodeURIComponent(searchQuery)}`);
+                }
+                else if(searchOption === "state"){
+                    navigate(`/api/search?state=${encodeURIComponent(searchQuery)}`);
+                }
+                else{
+                    navigate(`/api/search?locality=${encodeURIComponent(searchQuery)}`);
+                }
+                
             } else {
                 console.log('Failed to fetch search results');
             }
@@ -75,7 +92,20 @@ const BannerOne = () => {
                                     onClick={handleSubmit}>Search</button>
                         </div>
                     </div>
-                   
+                    <div className="col-lg-6 col-xl-6">
+                        <div className="login_banner-search text-center">
+                            <select
+                                value={searchOption}
+                                onChange={handleSearchOptionChange}
+                                className="search-option"
+                            >
+                                <option value="companyname">Company Name</option>
+                                <option value="city">City</option>
+                                <option value="locality">Locality</option>
+                                <option value="state">State</option>
+                            </select>
+                            </div>
+                            </div>
                 
                 </div>
             </div>

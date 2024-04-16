@@ -15,6 +15,7 @@ import UserLoginHome from './pages/UserLoginHome';
 import ProfessionalLoginHome from './pages/ProfessionalLoginHome';
 import ProfessionalAccountEdit from './pages/ProfessionalAccountEdit';
 import CompanyDetails from './pages/CompanyDetails';
+import MyAccount from './component/editprofile/MyAccount';
 
 import SearchResult from './common/header/SearchResult';
 
@@ -68,6 +69,8 @@ const App = () => {
 				<Route path={process.env.PUBLIC_URL+"/professionalhome"} element={<Protected><ProfessionalLoginHome/></Protected>}/>
 				<Route path={process.env.PUBLIC_URL+"/profile-edit"} element={<Protected><ProfessionalAccountEdit/></Protected>}/>
 				<Route path={process.env.PUBLIC_URL +"/api/search"} element={<Protected><SearchResult /></Protected>} />
+				<Route path={process.env.PUBLIC_URL +"/my-account"} element={<Protected><MyAccount /></Protected>} />
+
 
 			</Routes>
 		</ScrollToTop>
