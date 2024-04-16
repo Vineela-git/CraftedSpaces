@@ -39,9 +39,9 @@ const BannerOne = () => {
         <div className="banner banner-style-1">
             <div className="container">
                 <div className="row align-items-end align-items-xl-start">
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 col-xl-6">
                         <div className="banner-content">
-                                <div className=" row button-container axil-btn"> <h3>Explore Our Professionals</h3>
+                                <div className=" row user-button-container user-axil-btn"> <h3> Explore Our Professionals</h3>
                                 <Link to={process.env.PUBLIC_URL + "/builders"} className="axil-btn btn-large btn-fill-white"> Builders</Link>
 
                                 <Link to={process.env.PUBLIC_URL + "/architects"}className="axil-btn btn-large btn-fill-white">Architects</Link> 

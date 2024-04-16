@@ -1,3 +1,7 @@
+import { useMultiChatLogic, MultiChatSocket, MultiChatWindow } from "react-chat-engine-advanced";
+import { useState } from "react";
+
+
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route, BrowserRouter} from 'react-router-dom';
 import ScrollToTop from './component/scrollToTop/ScrollToTop';
@@ -32,12 +36,19 @@ import Artisan from './pages/DesignerProjects/Artisan';
 import UrbanNest from './pages/DesignerProjects/UrbanNest';
 import Evolve from './pages/DesignerProjects/Evolve';
 import Protected from './Protected';
+import FormOne from "./component/contact/FormOne";
+
+
 
 const App = () => {
+	const [user, setUser] = useState();
+	
+	
   return (
 	<BrowserRouter>
 		<ScrollToTop>
 			<Routes>
+
 				<Route path={process.env.PUBLIC_URL + "/"} element={<HomePage />}/>
 				<Route path={process.env.PUBLIC_URL+"/login"} element={<Login/>}/>
 				<Route path={process.env.PUBLIC_URL+"/about-us"} element={<AboutUs/>}/>
@@ -68,11 +79,15 @@ const App = () => {
 				<Route path={process.env.PUBLIC_URL+"/professionalhome"} element={<Protected><ProfessionalLoginHome/></Protected>}/>
 				<Route path={process.env.PUBLIC_URL+"/profile-edit"} element={<Protected><ProfessionalAccountEdit/></Protected>}/>
 				<Route path={process.env.PUBLIC_URL +"/api/search"} element={<Protected><SearchResult /></Protected>} />
-
+                
 			</Routes>
 		</ScrollToTop>
 	</BrowserRouter>
   )
+  
 }
+
+
+
 
 export default App;

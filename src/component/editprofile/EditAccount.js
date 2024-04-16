@@ -1,4 +1,6 @@
 import React, {useRef, useState,useEffect} from 'react';
+import axios from 'axios';
+
 import emailjs from '@emailjs/browser';
 import Alert from 'react-bootstrap/Alert';
 import SectionTitle from '../../elements/section-title/SectionTitle';
@@ -55,7 +57,19 @@ const FormThree = () => {
       });
     }
   }, [user]);
-
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        // Make an API call to fetch the user data from the backend
+        const response = await axios.get('/profile-edit');
+        setUser(response.data);
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+  
+    fetchUserData();
+  }, []);
 
 
         setTimeout(() => {

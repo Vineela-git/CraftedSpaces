@@ -21,7 +21,7 @@ const UserLoginHome = () => {
         <main className="main-wrapper">
             <UserLoginHeader />
             <BannerUserHome/>
-            <WhyChooseOne />
+            {/* <WhyChooseOne /> */}
             <div className="section section-padding-2 bg-color-dark">
                 <div className="container">
                     <SectionTitle 
@@ -44,7 +44,7 @@ const UserLoginHome = () => {
             
             <ProjectHome />
            
-            <CtaLayoutHome /> 
+            {/* <CtaLayoutHome />  */}
         <Footer parentClass="" />
         </main>
         </>

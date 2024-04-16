@@ -5,6 +5,10 @@ const userdetailsModel = require("../models/userdetails");
 const professionalModel = require("../models/professionalDetails");
 const jwt = require('jsonwebtoken');
 const salt = 10;
+const express = require('express');
+const router = express.Router();
+
+
 
 module.exports.register = async (req, res) => {
   // Store a user/professional
@@ -66,7 +70,7 @@ module.exports.login = async (req, res) => {
           } else {
             if (result) {
                 const token = jwt.sign({ user }, process.env.SECRET_KEY || 'fallback_secret', { expiresIn: '30m' });
-               return res.json({ token });
+                return res.json({ token });
             } else {
              return res.json("invalid");
             }
@@ -102,3 +106,6 @@ module.exports.login = async (req, res) => {
     console.log("error trying to login");
   }
 };
+
+
+// Route to fetch user data

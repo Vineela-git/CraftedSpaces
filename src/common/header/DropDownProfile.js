@@ -19,10 +19,10 @@ const DropDownProfile = () => {
    
     <ul className="mainmenu">
         <li className="menu-item-has-children">
-            <Link to="#">Profile <FaAngleDown /><FontAwesomeIcon icon={faUser} /></Link>
+            <Link to="#"><FontAwesomeIcon icon={faUser} /> Profile <FaAngleDown /></Link>
 
             <ul className="axil-submenu">
-                        <li><Link to={process.env.PUBLIC_URL + "#"}>Chat</Link></li>
+                        <li><Link to={process.env.PUBLIC_URL + "/#"}>Chat</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "#"}>Edit Profile</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "#"}>Settings</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "#"} onClickCapture={handleLogout}>Logout</Link></li>
