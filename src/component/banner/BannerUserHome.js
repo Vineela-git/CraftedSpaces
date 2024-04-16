@@ -23,7 +23,7 @@ const BannerOne = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent the default form submission behavior
-    if (searchQuery.trim().toLowerCase()) {
+    if (searchQuery.toLowerCase()) {
         
         try {
             // const response = await axios.get(`http://localhost:3001/api/search/?firstname=${encodeURIComponent(searchQuery)}`);
