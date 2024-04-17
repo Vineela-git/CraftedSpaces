@@ -28,7 +28,6 @@ const professionalSchema = new mongoose.Schema({
   },
   personalphone: {
     type: String,
-    required: true,
   },
   address: {
     type: String,
@@ -62,7 +61,43 @@ const professionalSchema = new mongoose.Schema({
     type: String,
     default: "professional",
   },
-  profileImages: [String],
+  instahandle: {
+    type: String,
+    default: "",
+  },
+  linkedinhandle: {
+    type: String,
+    default: "",
+  },
+  xhandle: {
+    type: String,
+    default: "",
+  },
+  aboutus: {
+    type: String,
+    default: "",
+  },
+  strategy: {
+    type: String,
+    default: "",
+  },
+  design: {
+    type: String,
+    default: "",
+  },
+  development: {
+    type: String,
+    default: "",
+  },
+  videoURL: {
+    type: String,
+    default: "",
+  },
+  profilePicture: {
+    type: String,
+    default: "",
+  },
+  additionalPictures: [String],
 });
 
 const professionalModel = mongoose.model("professionals", professionalSchema);
