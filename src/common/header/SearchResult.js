@@ -7,7 +7,7 @@ import { PacmanLoader } from 'react-spinners'; // Import PacmanLoader
 const SearchResult = () => {
     const location = useLocation(); // Use useLocation hook to access location object
   const [searchResults, setSearchResults] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);  
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -25,6 +25,7 @@ const SearchResult = () => {
         // Make an API request to your backend server
         const response = await axios.get('http://localhost:3001/api/search', { params: queryParams });
         setSearchResults(response.data.data); // Update searchResults state with the fetched data
+        console.log(response.data.data)
         setLoading(false);
       } catch (error) {
         console.log('Error fetching search results:', error);
@@ -63,8 +64,8 @@ const SearchResult = () => {
                 <li key={index}>
                     <article className="card" key={result._id}>
                         <div className="card-image">
-                            {/* <img src={result.flag.large} alt={result.name} /> */}
-                        </div>
+                        <img src={`http://localhost:3001/${result.profilePicture}`} alt={result.name} />  
+                                              </div>
                         <div className="card-content">
                             <h2 className="card-name">{result.name}</h2>
                             <ol className="card-list"> 

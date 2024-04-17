@@ -15,7 +15,7 @@ const Result = () => {
 
 const FormThree = () => {
   const form = useRef();
-const navigate = useNavigate();
+  const navigate = useNavigate();
   const [result, showresult] = useState(false);
   const [user, setUser] = useState(null);
   const [isEditing, setEditing] = useState(false);
@@ -35,6 +35,8 @@ const navigate = useNavigate();
     yearsofexperience: "",
     licensenumber: "",
     password: "",
+    profilePicture: null,
+    additionalPictures: [],
   });
   useEffect(() => {
     const fetchUserData = async () => {
@@ -49,7 +51,7 @@ const navigate = useNavigate();
           );
           sessionStorage.setItem("userData", JSON.stringify(data));
           setFormData(data);
-                } else {
+        } else {
           console.log("User ID not found in the cookie");
         }
       } catch (error) {
@@ -77,6 +79,8 @@ const navigate = useNavigate();
         officephone: user.officephone || "",
         yearsofexperience: user.yearsofexperience || "",
         licensenumber: user.licensenumber || "",
+        profilePicture: user.profilePicture || "",
+        additionalPictures: user.additionalPictures || [],
       });
     }
   }, [user]);
@@ -93,35 +97,57 @@ const navigate = useNavigate();
       [e.target.name]: e.target.value,
     });
   };
+  const handleProfilePictureChange = (e) => {
+    setFormData({
+      ...formData,
+      profilePicture: e.target.files[0],
+    });
+  };
+
+  const handleAdditionalPicturesChange = (e) => {
+    setFormData({
+      ...formData,
+      additionalPictures: Array.from(e.target.files),
+    });
+  };
   const handleUpdate = async (e) => {
     e.preventDefault(); // prevent the default form submission behavior
-  
+
     try {
       const token = localStorage.getItem("token");
       if (token) {
+        //new logic for appending:
+        const formDataToSend = new FormData();
+        Object.entries(formData).forEach(([key, value]) => {
+          if (key === "additionalPictures") {
+            value.forEach((file) => formDataToSend.append(key, file));
+          } else {
+            formDataToSend.append(key, value);
+          }
+        });
         const response = await axios.put(
           "http://localhost:3001/profile-edit",
-          formData,
+          formDataToSend,
           {
             headers: {
               Authorization: `Bearer ${token}`,
-              "Content-Type": "application/json",
+              "Content-Type": "multipart/form-data",
             },
           }
         );
-          // Update the user data in session storage
-      sessionStorage.setItem("userData", JSON.stringify(response.data));
+        // Update the user data in session storage
+        sessionStorage.setItem("userData", JSON.stringify(response.data));
 
-      // Refetch the user data from the server and update the local state
-      const { data } = await axios.get(`http://localhost:3001/profile-edit`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      setFormData(data);
+        // Refetch the user data from the server and update the local state
+        const { data } = await axios.get(`http://localhost:3001/profile-edit`, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        setFormData(data);
 
-      showresult(true);
+        showresult(true);
 
-      // Redirect the user to the "/my-account" route
-      navigate("/my-account");
+        // Redirect the user to the "/my-account" route
+        navigate("/my-account");
       } else {
         console.log("No token found in localStorage");
       }
@@ -140,7 +166,7 @@ const navigate = useNavigate();
           textColor=""
         />
       </div>
-      
+
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-9">
@@ -287,7 +313,25 @@ const navigate = useNavigate();
                   <input type="password" className="form-control" id="confirm-password" name="confirm-password" placeholder="......" required />
                 </div>        
               </div> */}
-
+            <div>
+              <label htmlFor="profilePicture">Profile Picture</label>
+              <input
+                type="file"
+                id="profilePicture"
+                name="profilePicture"
+                onChange={handleProfilePictureChange}
+              />
+            </div>
+            <div>
+              <label htmlFor="additionalPictures">Additional Pictures</label>
+              <input
+                type="file"
+                id="additionalPictures"
+                name="additionalPictures"
+                multiple
+                onChange={handleAdditionalPicturesChange}
+              />
+            </div>
             <div className="row justify-content-center">
               <div className="col-md-12 text-end">
                 <button
