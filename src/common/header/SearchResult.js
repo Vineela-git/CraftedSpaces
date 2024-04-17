@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom'; // Import useLocation hook
 import { PacmanLoader } from 'react-spinners'; // Import PacmanLoader
+import HeaderThree from './HeaderThree';
 
 
 const SearchResult = () => {
@@ -36,29 +37,18 @@ const SearchResult = () => {
   }, [location.search]);
 
   return (
-    // <div>
-    //   <h2>Search Results</h2>
-      
-    //   {loading ? (
-    //     <p>Loading...</p>
-    //   ) : (
-    //     <ul>
-    //       {searchResults.map((result) => (
-    //         <li key={result._id}>
-    //           {result.firstname} {result.lastname} - {result.companyname} - {result.state} - {result.city} - {result.professionaltype}
-    //         </li>
-    //       ))}
-    //     </ul>
-    //   )}
-    // </div>
-    <div className="wrapper">
+     <><HeaderThree/>
+    
+    <div className="container ">
+    <div className="wrapper row">
     {loading ? ( // Render PacmanLoader when loading is true
         <div className="loading-container">
             <PacmanLoader color="orange" size={100} />
             <div>Loading...</div>
         </div>
+        
     ) : (
-        <ul className="card-grid">
+        <ul className="card-grid "style={{ marginTop: '200px' }}>
             {searchResults.map((result, index) => (
                 <li key={index}>
                     <article className="card" key={result._id}>
@@ -84,7 +74,9 @@ const SearchResult = () => {
             ))}
         </ul>
     )}
+</div> 
 </div>
+</>
   );
 };
 

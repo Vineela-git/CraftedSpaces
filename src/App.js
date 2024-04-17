@@ -33,7 +33,7 @@ import Artisan from './pages/DesignerProjects/Artisan';
 import UrbanNest from './pages/DesignerProjects/UrbanNest';
 import Evolve from './pages/DesignerProjects/Evolve';
 import Protected from './Protected';
-
+import ProfessionalPage from './pages/ProfessionalPage';
 const App = () => {
   return (
 	<BrowserRouter>
@@ -70,6 +70,7 @@ const App = () => {
 				<Route path={process.env.PUBLIC_URL+"/profile-edit"} element={<Protected><ProfessionalAccountEdit/></Protected>}/>
 				<Route path={process.env.PUBLIC_URL +"/api/search"} element={<Protected><SearchResult /></Protected>} />
 				<Route path={process.env.PUBLIC_URL +"/my-account"} element={<Protected><MyAccount /></Protected>} />
+				<Route path={process.env.PUBLIC_URL +"/professional-page"} element={<Protected><ProfessionalPage /></Protected>} />
 
 
 			</Routes>

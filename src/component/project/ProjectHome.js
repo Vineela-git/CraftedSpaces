@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import ProjectPropOne from './itemProp/ProjectPropOne';
+import ProjectPropHome from '../project/itemProp/ProjectPropHome';
 import SectionTitle from '../../elements/section-title/SectionTitle';
 import ProjectData from "../../data/project/ProjectData.json";
 
@@ -86,7 +86,7 @@ const ProjectOne = ({parentClass, colSize, itemShow, columnGap}) => {
 					<div className={`row ${columnGap ? columnGap : "row-35"}`}>
 						{visibleItems.map((data) => (
 							<div className={colSize ? colSize : "col-md-6"} key={data.id}>
-								<ProjectPropOne projectStyle="" portfolio={data}/>
+								<ProjectPropHome projectStyle="" portfolio={data}/>
 							</div>
 						))}
 					</div>

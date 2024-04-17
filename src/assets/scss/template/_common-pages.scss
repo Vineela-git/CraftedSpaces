@@ -194,19 +194,27 @@
   .card-grid {
     margin: 2em 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 48px;
     list-style-type: none;
   }
   
   .card {
     background-color: var(--bg-offset);
-    padding: 0px;
-    box-shadow: 0px 2px 4px var(--border);
+    padding: 20px; /* Increase padding for a thicker card */
+    background: linear-gradient(135deg, #dcdeff,#f0f0fd);
+    box-shadow: 0px 48px 48px 0px rgba(175, 148, 228, 0.12);
+      
+    border-radius: 8px; /* Add rounded corners */  
     transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    height:400px; /* Setting fixed height for the card*/
+    
+  
   }
   .card:hover {
     transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
   }
   .card:hover .card-content h2 {
     display: block;
@@ -218,6 +226,8 @@
   .card-image {
     max-height: 150px;
     overflow: hidden;
+    flex-shrink: 0; /* Prevent image from shrinking */
+
   }
   
   .card-image img {
@@ -229,7 +239,10 @@
   }
   
   .card-content {
-    padding: 32px 15px;
+    padding: 20px 0;
+    flex-grow: 1; /* Allow content to grow and fill remaining space */
+    display: flex;
+    flex-direction: column;
   }
   .card-content h2 {
     display: -webkit-box;
@@ -242,6 +255,8 @@
   .card-list {
     margin-top: 16px;
     list-style-type: none;
+    flex-grow: 1; /* Allow list to grow and fill remaining space */
+
   }
   .card-list li {
     color: var(--text);

@@ -4,15 +4,16 @@
 input,
 .form-control {
     border: var(--border-lighter);
-    border-radius: 16px;
+    border-radius: 26px;
     background-color: transparent;
     color: var(--color-text-dark);
     padding: 15px 20px;
     width: 100%;
+    
     &:focus {
         outline: none;
-        box-shadow: 0 20px 48px -14px rgba(153,161,170,0.25);
-        border-color: transparent;
+        box-shadow: 0 20px 48px -14px rgba(145, 189, 242, 0.25);
+        border-color: #bdbcf9;
 
     }
     /* -- Placeholder -- */

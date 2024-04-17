@@ -21,7 +21,6 @@ const AboutFour = () => {
                                 <h2 className="title">Our Identity and Commitment to Construction Solutions</h2>
                                 <p>Whether it's residential, commercial, or industrial construction</p>
                                 <p>We have the knowledge, skills, and resources to tackle projects of any size and complexity</p>
-                                <Link to="#" className="axil-btn btn-fill-primary btn-large">Read More</Link>
                             </div>
                             <div className="case-study-counterup">
                                 {/* <div className="single-counterup">
