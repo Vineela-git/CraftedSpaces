@@ -3,10 +3,8 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const userdetailsModel = require("../models/userdetails");
 const professionalModel = require("../models/professionalDetails");
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 const salt = 10;
-const express = require('express');
-const router = express.Router();
 
 
 
@@ -69,10 +67,22 @@ module.exports.login = async (req, res) => {
             console.log(err);
           } else {
             if (result) {
-                const token = jwt.sign({ user }, process.env.SECRET_KEY || 'fallback_secret', { expiresIn: '30m' });
-                return res.json({ token });
+
+              // req.session.user = user._id;
+              const token = jwt.sign(
+                { userId: user._id },
+                process.env.SECRET_KEY || "fallback_secret",
+                { expiresIn: "30m" }
+              );
+              // Set the user's ID as a cookie
+              // res.cookie("user_id", user._id, {
+              //   httpOnly: true, // Ensure the cookie is only accessible by the server
+              //   maxAge: 30 * 60 * 1000, // Cookie expires in 30 minutes
+              // });
+              return res.json({ token });
+
             } else {
-             return res.json("invalid");
+              return res.json("invalid");
             }
           }
         });
@@ -89,15 +99,23 @@ module.exports.login = async (req, res) => {
                 console.log(err);
               } else {
                 if (result) {
-                    const token = jwt.sign({ professional }, process.env.SECRET_KEY || 'fallback_secret', { expiresIn: '30m' });
+                  const token = jwt.sign(
+                    { professionalId: professional._id },
+                    process.env.SECRET_KEY || "fallback_secret",
+                    { expiresIn: "60m" }
+                  );
+                  // res.cookie("professional_id", professional._id, {
+                  //   httpOnly: true, // Ensure the cookie is only accessible by the server
+                  //   maxAge: 30 * 60 * 1000, // Cookie expires in 30 minutes
+                  // });
                   return res.json({ token });
                 } else {
-                 return res.json("invalid");
+                  return res.json("invalid");
                 }
               }
             });
           } else {
-           return res.json("No records found, Please sign up first!");
+            return res.json("No records found, Please sign up first!");
           }
         });
       }

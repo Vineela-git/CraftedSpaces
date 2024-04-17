@@ -19,26 +19,49 @@ const FormOne = () => {
 
   //prevents the default form submission behavior, which is a page reload
   //Once you've prevented the default behavior, you can execute custom logic
+  // useEffect(() => {
+  //   try {
+  //     const token = localStorage.getItem("token");
+  //     if (token) {
+  //       // If token exists, decode it to check if user is logged in
+  //       const decoded = jwtDecode(token);
+  //       if (decoded.user) {
+  //         setUser(decoded.user);
+  //         setLoggedIn(true);
+  //         navigate("/userhome");
+  //       } else if (decoded.professional) {
+  //         // You can handle professional user case here
+  //         setLoggedIn(true);
+  //         navigate("/professionalhome");
+  //       }
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // }, []); // Empty dependency array to run only once when component mounts
+
   useEffect(() => {
-    try {
-      const token = localStorage.getItem("token");
-      if (token) {
-        // If token exists, decode it to check if user is logged in
-        const decoded = jwtDecode(token);
-        if (decoded.user) {
-          setUser(decoded.user);
-          setLoggedIn(true);
-          navigate("/userhome");
-        } else if (decoded.professional) {
-          // You can handle professional user case here
-          setLoggedIn(true);
-          navigate("/professionalhome");
+    const checkLogin = async () => {
+      try {
+        const token = localStorage.getItem("token");
+        if (token) {
+          const decoded = jwtDecode(token);
+          if (decoded.userId) {
+            setUser(decoded.user);
+            setLoggedIn(true);
+            navigate("/userhome");
+          } else if (decoded.professionalId) {
+            setLoggedIn(true);
+            navigate("/professionalhome");
+          }
         }
+      } catch (err) {
+        console.log(err);
       }
-    } catch (err) {
-      console.log(err);
-    }
-  }, []); // Empty dependency array to run only once when component mounts
+    };
+    checkLogin();
+  }, [navigate]);
+
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -51,11 +74,11 @@ const FormOne = () => {
       localStorage.setItem("token", token);
       if (token) {
         const decoded = jwtDecode(token);
-        if (decoded.user) {
+        if (decoded.userId) {
           setUser(decoded.user);
           setLoggedIn(true);
           navigate("/userhome");
-        } else if (decoded.professional) {
+        } else if (decoded.professionalId) {
           setLoggedIn(true);
           navigate("/professionalhome");
         }

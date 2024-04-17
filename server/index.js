@@ -10,16 +10,27 @@ const userdetailsModel = require("./models/userdetails.js");
 const professionalModel = require("./models/professionalDetails.js");
 const profSearch = require("./routes/professionalsSearch.js");
 const {login, register} = require("./Controllers/controller.js") ;
+const { showDetails, updateDetails } = require("./Controllers/editprofilecontroller.js");
+const path = require("path");
 port = 3001;
 const app = express();
 app.use(express.json());
 app.use(cors());
 app.use("/api",profSearch)
+app.use('/uploads', express.static(path.join(__dirname, 'uploads'), (req, res, next) => {
+  const imagePath = path.join(__dirname, 'uploads', req.url.slice(1));
+  console.log('Serving image:', imagePath);
+  next();
+}));
 mongoose.connect("mongodb://127.0.0.1:27017/userdetails");
-app.use('/secure', expressJwt({ secret: process.env.SECRET, algorithms: ['HS256'] }));
+app.use('/secure', expressJwt({ secret: process.env.SECRET_KEY, algorithms: ['HS256'] }));
 
 app.post("/signup", register );
 app.post("/login", login);
+app.put("/profile-edit", updateDetails);
+app.get("/profile-edit", showDetails);
+app.get("/my-account", showDetails);
+
 
 app.get("/", function (req, res) {
   res.render("index", {});

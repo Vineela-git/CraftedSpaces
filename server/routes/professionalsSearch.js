@@ -60,6 +60,8 @@ res.status(200).json({
     error:false,
     data: search
 });
+console.log(search)
+
 
 
 
