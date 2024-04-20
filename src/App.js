@@ -16,6 +16,8 @@ import ProfessionalLoginHome from './pages/ProfessionalLoginHome';
 import ProfessionalAccountEdit from './pages/ProfessionalAccountEdit';
 import CompanyDetails from './pages/CompanyDetails';
 import MyAccount from './component/editprofile/MyAccount';
+import UserMyAccount from './component/editprofile/UserMyAccount';
+import UserEditProfile from './component/editprofile/UserEditProfile';
 
 import SearchResult from './common/header/SearchResult';
 
@@ -68,9 +70,13 @@ const App = () => {
 				<Route path={process.env.PUBLIC_URL+"/userhome"} element={<Protected><UserLoginHome/></Protected>}/>
 				<Route path={process.env.PUBLIC_URL+"/professionalhome"} element={<Protected><ProfessionalLoginHome/></Protected>}/>
 				<Route path={process.env.PUBLIC_URL+"/profile-edit"} element={<Protected><ProfessionalAccountEdit/></Protected>}/>
+				<Route path={process.env.PUBLIC_URL+"/user-profile-edit"} element={<Protected><UserEditProfile/></Protected>}/>
+
 				<Route path={process.env.PUBLIC_URL +"/api/search"} element={<Protected><SearchResult /></Protected>} />
 				<Route path={process.env.PUBLIC_URL +"/my-account"} element={<Protected><MyAccount /></Protected>} />
-				<Route path={process.env.PUBLIC_URL +"/professional-page"} element={<Protected><ProfessionalPage /></Protected>} />
+				<Route path={process.env.PUBLIC_URL +"/user-my-account"} element={<Protected><UserMyAccount /></Protected>} />
+
+				<Route path={process.env.PUBLIC_URL +"/professionals/companyname/:companyName"} element={<Protected><ProfessionalPage /></Protected>} />
 
 
 			</Routes>

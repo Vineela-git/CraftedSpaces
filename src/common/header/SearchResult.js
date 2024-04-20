@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useLocation } from 'react-router-dom'; // Import useLocation hook
+import { useLocation , useNavigate } from 'react-router-dom'; // Import useLocation hook
 import { PacmanLoader } from 'react-spinners'; // Import PacmanLoader
 import HeaderThree from './HeaderThree';
 
 
 const SearchResult = () => {
     const location = useLocation(); // Use useLocation hook to access location object
+    const navigate = useNavigate();
   const [searchResults, setSearchResults] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);  
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -26,6 +27,7 @@ const SearchResult = () => {
         // Make an API request to your backend server
         const response = await axios.get('http://localhost:3001/api/search', { params: queryParams });
         setSearchResults(response.data.data); // Update searchResults state with the fetched data
+        console.log(response.data.data)
         setLoading(false);
       } catch (error) {
         console.log('Error fetching search results:', error);
@@ -35,38 +37,46 @@ const SearchResult = () => {
 
     fetchSearchResults();
   }, [location.search]);
+  const handleProfessionalClick = (professional) => {
+    // Navigate to the detailed view page, passing the professional's ID as a parameter
+    navigate(`/professionals/companyname/${professional.companyname}`);
+  };
 
   return (
-     <><HeaderThree/>
-    
-    <div className="container ">
-    <div className="wrapper row">
+    <>
+   
+    <div className="wrapper">
     {loading ? ( // Render PacmanLoader when loading is true
         <div className="loading-container">
-            <PacmanLoader color="orange" size={100} />
+            {/* <PacmanLoader color="orange" size={100} /> */}
             <div>Loading...</div>
         </div>
-        
     ) : (
-        <ul className="card-grid "style={{ marginTop: '200px' }}>
+        <ul className="card-grid">
             {searchResults.map((result, index) => (
                 <li key={index}>
-                    <article className="card" key={result._id}>
+                    <article className="card" key={result._id} onClick={() => handleProfessionalClick(result)}>
                         <div className="card-image">
-                            {/* <img src={result.flag.large} alt={result.name} /> */}
-                        </div>
+                        <img src={`http://localhost:3001/${result.profilePicture}`} alt={result.name} />  
+                                              </div>
                         <div className="card-content">
                             <h2 className="card-name">{result.name}</h2>
                             <ol className="card-list"> 
-                                <li >
-                                    Company Name: <span>{result.companyname}</span>
+                            <li >
+                                     <span>{result.companyname}</span>
+                                </li>
+                            <li>
+                                   <span>{result.firstname}</span>  <span>{result.lastname}</span>
+                                </li>
+                               
+                                <li>
+                                  <span>{result.city}</span>
                                 </li>
                                 <li>
-                                    City: <span>{result.city}</span>
+                                <span>{result.state}</span>
                                 </li>
-                                <li>
-                                    firstname: <span>{result.firstname}</span>
-                                </li>
+                              
+                                
                             </ol>
                         </div>
                     </article>
@@ -74,7 +84,6 @@ const SearchResult = () => {
             ))}
         </ul>
     )}
-</div> 
 </div>
 </>
   );

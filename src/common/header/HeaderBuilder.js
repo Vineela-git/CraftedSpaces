@@ -72,7 +72,7 @@ const HeaderBuilder = () => {
                     </div>
                 </div>
             </header>
-            <OffcanvasMenu offcanvasShow={showOffcanvas} offcanvasHide={OffcanvasHandleClose} />
+            {/* <OffcanvasMenu offcanvasShow={showOffcanvas} offcanvasHide={OffcanvasHandleClose} /> */}
             <MobileMenu MobileHandler={MobileMenuHandler}/>
         </>
     )

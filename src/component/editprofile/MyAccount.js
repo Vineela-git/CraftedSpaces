@@ -4,7 +4,9 @@ import Alert from "react-bootstrap/Alert";
 import SectionTitle from "../../elements/section-title/SectionTitle";
 import axios from "axios";
 import Cookies from "js-cookie";
-import { useNavigate } from 'react-router-dom';
+import ProfessionalLoginHeader from '../../common/header/ProfessionalLoginHeader';
+import BannerProfessionalHome from '../banner/BannerProfessionalHome';
+import { useNavigate } from "react-router-dom";
 const Result = () => {
   return (
     <Alert variant="success" className="success-msg">
@@ -14,7 +16,7 @@ const Result = () => {
 };
 
 const FormTen = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [result, showresult] = useState(false);
   const [user, setUser] = useState(null);
   const [isEditing, setEditing] = useState(false);
@@ -34,18 +36,25 @@ const FormTen = () => {
     yearsofexperience: "",
     licensenumber: "",
     password: "",
+    profilePicture: null,
+    additionalPictures: [],
+    videoURL: "",
+    aboutus: "",
+    design: "",
+    development: "",
+    instahandle: "",
+    linkedinhandle: "",
+    strategy: "",
+    xhandle: "",
   });
   useEffect(() => {
     const fetchUserData = async () => {
       try {
         const token = localStorage.getItem("token");
         if (token) {
-          const { data } = await axios.get(
-            `http://localhost:3001/my-account`,
-            {
-              headers: { Authorization: `Bearer ${token}` },
-            }
-          );
+          const { data } = await axios.get(`http://localhost:3001/my-account`, {
+            headers: { Authorization: `Bearer ${token}` },
+          });
           setUser(data);
         } else {
           console.log("User ID not found in the cookie");
@@ -67,7 +76,8 @@ const FormTen = () => {
         firstname: user.firstname || "",
         lastname: user.lastname || "",
         email: user.email || "",
-        phone: user.phone || "",
+        professionaltype: user.professionaltype || "",
+        personalphone: user.personalphone || "",
         address: user.address || "",
         city: user.city || "",
         state: user.state || "",
@@ -75,6 +85,16 @@ const FormTen = () => {
         officephone: user.officephone || "",
         yearsofexperience: user.yearsofexperience || "",
         licensenumber: user.licensenumber || "",
+        profilePicture: user.profilePicture || "",
+        additionalPictures: user.additionalPictures || [],
+        videoURL: user.videoURL || "",
+        aboutus: user.aboutus || "",
+        design: user.design || "",
+        development: user.development || "",
+        instahandle: user.instahandle || "",
+        linkedinhandle: user.linkedinhandle || "",
+        strategy: user.strategy || "",
+        xhandle: user.xhandle || "",
       });
     }
   }, [user]);
@@ -87,16 +107,20 @@ const FormTen = () => {
   const handleUpdate = async (e) => {
     try {
       const token = localStorage.getItem("token");
-      if(token){
-navigate("/profile-edit");
+      if (token) {
+        navigate("/profile-edit");
       }
-     
     } catch (err) {
       console.log(err);
     }
   };
 
   return (
+    <> 
+     <main className="main-wrapper">
+        <ProfessionalLoginHeader />
+            <BannerProfessionalHome/>
+   
     <form className="axil-contact-form">
       <div className="container">
         <SectionTitle
@@ -144,7 +168,6 @@ navigate("/profile-edit");
                 />
               </div>
             </div>
-
             <div className="row mb-3">
               <div className="col-md-6">
                 <label htmlFor="first-name">Email</label>
@@ -169,7 +192,6 @@ navigate("/profile-edit");
                 />
               </div>
             </div>
-
             <div className="row mb-3">
               <div className="col-md-6">
                 <label htmlFor="contact-message">Address</label>
@@ -194,7 +216,6 @@ navigate("/profile-edit");
                 />
               </div>
             </div>
-
             <div className="row mb-3">
               <div className="col-md-6">
                 <label htmlFor="pincode">State</label>
@@ -241,18 +262,127 @@ navigate("/profile-edit");
                 />
               </div>
             </div>
-
-            {/* <div className="row mb-3">
+            <div>
+              <img
+                src={`http://localhost:3001/${formData.profilePicture}`}
+                alt="Profile Preview"
+                style={{ maxWidth: "200px", marginTop: "10px" }}
+              />
+            </div>
+            <div>
+              {formData.additionalPictures.map((picture, index) => (
+                <img
+                  key={index}
+                  src={`http://localhost:3001/${picture}`}
+                  alt={`Additional Picture ${index}`}
+                  style={{ maxWidth: "200px", marginTop: "10px" }}
+                />
+              ))}
+            </div>
+            <div className="container">
+              <SectionTitle
+                title="Socials"
+                description=""
+                textAlignment="heading-left"
+                textColor=""
+              />
               <div className="col-md-6">
-                  <label htmlFor="text">Reset Password</label>
-                  <input type="password" className="form-control" id="reset-password" name="reset-password" placeholder="....." required />
-                </div> 
-                <div className="col-md-6">
-                  <label htmlFor="text">Confirm Password</label>
-                  <input type="password" className="form-control" id="confirm-password" name="confirm-password" placeholder="......" required />
-                </div>        
-              </div> */}
-
+                <label htmlFor="url">Facebook URL</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="instahandle"
+                  name="instahandle"
+                  value={formData.instahandle}
+                  disabled
+                />
+              </div>
+              <div className="col-md-6">
+                <label htmlFor="url">LinkedIn URL</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="linkedinhandle"
+                  name="linkedinhandle"
+                  value={formData.linkedinhandle}
+                  disabled
+                />
+              </div>
+              <div className="col-md-6">
+                <label htmlFor="url">Twitter URL</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="xhandle"
+                  name="xhandle"
+                  value={formData.xhandle}
+                  disabled
+                />
+              </div>
+              <div className="col-md-6">
+                <label htmlFor="url">Youtube Video Link</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="videoURL"
+                  name="videoURL"
+                  value={formData.videoURL}
+                  disabled
+                />
+              </div>
+            </div>
+            <div className="container">
+              <SectionTitle
+                title="About"
+                description=""
+                textAlignment="heading-left"
+                textColor=""
+              />
+              <div className="col-md-6">
+                <label htmlFor="url">About Us</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="aboutus"
+                  name="aboutus"
+                  value={formData.aboutus}
+                  disabled
+                />
+              </div>
+              <div className="col-md-6">
+                <label htmlFor="url">Design</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="design"
+                  name="design"
+                  value={formData.design}
+                  disabled
+                />
+              </div>
+              <div className="col-md-6">
+                <label htmlFor="url">Development</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="development"
+                  name="development"
+                  value={formData.development}
+                  disabled
+                />
+              </div>
+              <div className="col-md-6">
+                <label htmlFor="url">Strategy</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="strategy"
+                  name="strategy"
+                  value={formData.strategy}
+                  disabled
+                />
+              </div>
+            </div>
             <div className="row justify-content-center">
               <div className="col-md-12 text-end">
                 <button
@@ -273,6 +403,8 @@ navigate("/profile-edit");
         <div className="form-group">{result ? <Result /> : null}</div>
       </div>
     </form>
+    </main>
+    </>
   );
 };
 

@@ -11,7 +11,7 @@ const Nav = () => {
         <nav className="mainmenu-nav">
             <ul className="mainmenu">
                 <li className="menu-item-has-children">
-                    <Link to="/">Home </Link>
+                    <Link to="/professionalhome">Home </Link>
                 </li>
 
                 <li className="menu-item-has-children">
@@ -28,7 +28,6 @@ const Nav = () => {
                     </ul>
                 </li>
                
-
                 <li><Link to={process.env.PUBLIC_URL + "/contact-us"}>Contact Us</Link></li>
 
                 {/* <li className="menu-item-has-children">

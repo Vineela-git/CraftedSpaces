@@ -24,9 +24,8 @@ const DropDownProfile = () => {
             <Link to="#">Profile <FaAngleDown /><FontAwesomeIcon icon={faUser} /></Link>
 
             <ul className="axil-submenu">
-                        <li><Link to={process.env.PUBLIC_URL + "#"}>Chat</Link></li>
-                        <li><Link to={process.env.PUBLIC_URL + "/profile-edit"}>Edit Profile</Link></li>
-                        <li><Link to={process.env.PUBLIC_URL + "#"}>Settings</Link></li>
+                        <li><Link to={process.env.PUBLIC_URL + "http://localhost:3002/"}>Chat</Link></li>
+                        <li><Link to={process.env.PUBLIC_URL + "/my-account"}>My Account</Link></li>
                         <li><Link to={process.env.PUBLIC_URL + "#"} onClickCapture={handleLogout}>Logout</Link></li>
                     </ul>
         </li>

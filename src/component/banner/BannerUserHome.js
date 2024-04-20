@@ -93,6 +93,7 @@ const BannerOne = () => {
                           <option value="firstname">First Name of Professional</option>
                           <option value="city">City</option>
                           <option value="state">State</option>
+                          <option value="all">All Professionals</option>
                         </select>
                         
                         <input

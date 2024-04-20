@@ -338,7 +338,7 @@
     },
     {
         "id": 56,
-        "image": "/images/project/project-villas.png",
+        "image": "/images/project/Dinein.jpeg",
         "title": "Deccan Dine-In",
         "category": ["Dine-In"],
         "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
@@ -346,25 +346,25 @@
     },
     {
         "id": 57,
-        "image": "/images/project/project-villas.png",
-        "title": "Secret Garden Villa",
-        "category": ["Villa"],
-        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
-        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
-    },
-    {
-        "id": 58,
-        "image": "/images/project/project-villas.png",
+        "image": "/images/project/project-2.png",
         "title": "Twilight Terrace Homes",
         "category": ["Homes"],
         "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
         "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
     },
     {
-        "id": 59,
-        "image": "/images/project/project-villas.png",
+        "id": 58,
+        "image": "/images/project/project-14.png",
         "title": "Humming Bird Cafe",
         "category": ["cafe"],
+        "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
+        "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
+    },
+    {
+        "id": 59,
+        "image": "/images/project/project-villas.png",
+        "title": "Secret Garden Villa",
+        "category": ["Villa"],
         "excerpt": "A quick view of industry specific problems solved with design by the awesome team at Keystroke.",
         "body": ["From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the first time. We provide elegant solutions that set new standards for online publishing.", "Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business. A holistic, user-centric perspective is what truly sets one apart."]
     }
