@@ -18,13 +18,8 @@ import ProjectData from "../data/project/ProjectData.json";
 
 
 const Professionalpage = () => {
-    const portfolioData = ProjectData;
-    const url = window.location.pathname;
-    const urlparts = url.split('/');
-    console.log(url)
-
-    console.log(urlparts);
-    const { companyName } = urlparts[3]; // Destructure companyName from useParams
+   console.log(useParams());
+    let { companyName } = useParams();
     console.log(companyName);
 
     const [professional, setProfessional] = useState(null);
@@ -138,12 +133,7 @@ const Professionalpage = () => {
                   <h3 className="title">About Us</h3>
                 </div>
 
-                <p> We are a renowned construction company specializing in 
-                    residential and commercial projects. With years of experience in the industry, 
-                    Buildwell Builders has earned a reputation for its commitment to quality, 
-                    reliability, and innovation.Buildwell Builders employs a team of skilled architects, 
-                    engineers, and construction professionals who work together to bring clients' 
-                    visions to life.
+                <p> {professional.aboutus}
                  </p>
               </div>
               <div className="col-lg-6 offset-xl-1">
@@ -154,20 +144,20 @@ const Professionalpage = () => {
                       <Accordion.Header>
                         <FaCompress /> Strategy
                       </Accordion.Header>
-                      <Accordion.Body>
+                      <Accordion.Body>{professional.strategy}
                          </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="2">
                       <Accordion.Header>
                         <FaCode /> Design
                       </Accordion.Header>
-                      <Accordion.Body></Accordion.Body>
+                      <Accordion.Body>{professional.design}</Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="3">
                       <Accordion.Header>
                         <FaGlobe /> Development
                       </Accordion.Header>
-                      <Accordion.Body></Accordion.Body>
+                      <Accordion.Body>{professional.development}</Accordion.Body>
                     </Accordion.Item>
                   </Accordion>
                 </div>
@@ -237,14 +227,14 @@ const Professionalpage = () => {
                 textAlignment="heading-light-left"
                 textColor=""
             />
-            <div className="row row-45">
+            {/* <div className="row row-45">
             {portfolioData.filter(data => data.id===58 ||data.id===59||data.id === 57).map((data) => (
                     <div className="col-md-6" key={data.id}>
                         <ProjectPropTwo projectStyle="project-style-4" portfolio={data}/>
                     </div>
                 ))}
 
-            </div>
+            </div> */}
         
         </div>
     </div>
