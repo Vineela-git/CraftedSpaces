@@ -1,0 +1,21 @@
+
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+  "username": "binny",
+  "secret": "asdfgh"
+}
+
+###
+
+POST http://localhost:3001/signup
+Content-Type: application/json
+
+{
+  "username": "binny",
+  "secret": "asdfgh",
+  "email": "vinny@gmail.com",
+  "first_name": "vinny",
+  "last_name": "maddy"
+}

@@ -20,7 +20,6 @@ const AboutFive = () => {
                         <span className="subtitle">Our Team</span>
                         <h2>Alone we can do so little; together we can do so much.</h2>  
                         <p>we believe in the power of teamwork to achieve extraordinary results. Our team is the heart and soul of our organization, and we take pride in bringing together a group of talented individuals who share a common passion for excellence in the construction industry.</p>
-                        <Link to="#" className="axil-btn btn-large btn-fill-primary">Our Team</Link>
                     </div>
                     </div>
                 </div>

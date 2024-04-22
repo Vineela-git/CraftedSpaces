@@ -13,7 +13,18 @@
         padding: 60px 0 30px;
     }
 }
-
+.demo-section-padding {
+    padding: 80px 0 60px; /* Reduced top and bottom padding */
+    @media #{$smlg-device} {
+      padding: 60px 0 40px; /* Adjusted for smaller screens */
+    }
+    @media #{$md-layout} {
+      padding: 50px 0 30px; /* Adjusted for medium screens */
+    }
+    @media #{$sm-layout} {
+      padding: 40px 0 20px; /* Adjusted for small screens */
+    }
+  }
 .section-padding-2 {
     padding: 140px 0 100px;
     @media #{$smlg-device} {

@@ -3,7 +3,7 @@ import ProfessionalLoginHeader from '../common/header/ProfessionalLoginHeader';
 import Footer from '../common/footer/Footer';
 import SEO from '../common/SEO';
 import WhyChooseOne from '../component/whychoose/WhyChooseOne';
-import BannerUserHome from '../component/banner/BannerUserHome';
+import BannerProfessionalHome from '../component/banner/BannerProfessionalHome';
 import CtaLayoutHome from '../component/cta/CtaLayoutHome';
 import ProjectHome from '../component/project/ProjectHome';
 import ServiceLogin from '../component/service/ServiceLogin';
@@ -20,7 +20,7 @@ const UserLoginHome = () => {
          <ColorSwitcher/>
         <main className="main-wrapper">
             <ProfessionalLoginHeader />
-            <BannerUserHome/>
+            <BannerProfessionalHome/>
             <WhyChooseOne />
             <div className="section section-padding-2 bg-color-dark">
                 <div className="container">

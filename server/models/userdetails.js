@@ -3,7 +3,9 @@ const userSchema = new mongoose.Schema({
     "fullname": String,
   "email" : String,
   "phone": String,     
- "location" : String,
+ "city" : String,
+ "state": String,
+ "zipcode": String,
 "address": String,
 "password": String
 })

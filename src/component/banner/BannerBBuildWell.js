@@ -15,7 +15,7 @@ const BannerThree = () => {
                             <span className="subtitle">Builders</span>
                         
                         
-                            <h1 className="title">BuildWell Builders</h1>
+                            <h1 className="title">BuildWell </h1>
                         
                         
                         <div className="btn-group">

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Logo from '../../elements/logo/Logo';
 import NavBarProfProfile from '../../component/contact/NavBarProfProfile';
-import OffcanvasMenu from './OffcanvasMenu';
 import StickyHeader from './StickyHeader';
 import SwitcherHeader from '../../elements/switcher/SwitcherHeader';
 import MobileMenu from './MobileMenu';

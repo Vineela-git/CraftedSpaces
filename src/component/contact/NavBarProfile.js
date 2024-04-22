@@ -11,7 +11,7 @@ const Nav = () => {
         <nav className="mainmenu-nav">
             <ul className="mainmenu">
                 <li className="menu-item-has-children">
-                    <Link to="/">Home </Link>
+                    <Link to="/userhome">Home </Link>
                 </li>
 
                 <li className="menu-item-has-children">

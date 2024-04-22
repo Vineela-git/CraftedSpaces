@@ -29,8 +29,8 @@ const Nav = () => {
 
                 <li><Link to={process.env.PUBLIC_URL + "/contact-us"}>Contact Us</Link></li>
 
-                <li className="menu-item-has-children">
-                <Link to={process.env.PUBLIC_URL+"/signup"}>Signup</Link></li>
+                {/* <li className="menu-item-has-children">
+                <Link to={process.env.PUBLIC_URL+"/signup"}>Signup</Link></li> */}
             </ul>
            
         </nav>
