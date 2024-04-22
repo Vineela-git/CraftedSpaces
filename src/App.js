@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route, BrowserRouter} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, BrowserRouter,Navigate} from 'react-router-dom';
 import ScrollToTop from './component/scrollToTop/ScrollToTop';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './pages/HomePage';
@@ -36,11 +36,14 @@ import UrbanNest from './pages/DesignerProjects/UrbanNest';
 import Evolve from './pages/DesignerProjects/Evolve';
 import Protected from './Protected';
 import ProfessionalPage from './pages/ProfessionalPage';
+
+
 const App = () => {
   return (
 	<BrowserRouter>
 		<ScrollToTop>
 			<Routes>
+
 				<Route path={process.env.PUBLIC_URL + "/"} element={<HomePage />}/>
 				<Route path={process.env.PUBLIC_URL+"/login"} element={<Login/>}/>
 				<Route path={process.env.PUBLIC_URL+"/about-us"} element={<AboutUs/>}/>

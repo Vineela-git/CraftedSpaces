@@ -11,8 +11,10 @@ const professionalModel = require("./models/professionalDetails.js");
 const {getProfDetails} = require("./Controllers/getprofdetails.js");
 const profSearch = require("./routes/professionalsSearch.js");
 const {login, register} = require("./Controllers/controller.js") ;
-const { showDetails, updateDetails } = require("./Controllers/editprofilecontroller.js");
+const { showDetails, updateDetails,chatCompononent } = require("./Controllers/editprofilecontroller.js");
+
 const path = require("path");
+
 port = 3001;
 const app = express();
 app.use(express.json());
@@ -38,6 +40,7 @@ app.get("/user-profile-edit",showDetails);
 app.get("/user-my-account",showDetails);
 
 app.get('/professionals/companyname/:companyName', getProfDetails);
+app.get("https://api.chatengine.io/users/",chatCompononent);
 
 app.get("/", function (req, res) {
   res.render("index", {});

@@ -29,6 +29,8 @@
     "react-animated-css-onscroll": "^1.2.1",
     "react-animation-on-scroll": "^5.1.0",
     "react-bootstrap": "^2.10.1",
+    "react-chat-engine": "^1.11.28",
+    "react-chat-engine-pretty": "^0.1.8",
     "react-countup": "^6.5.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
